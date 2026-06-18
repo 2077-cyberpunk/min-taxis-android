@@ -356,7 +356,7 @@
                 <ImageView
                     android:layout_width="24dp"
                     android:layout_height="24dp"
-                    android:src="@drawable/min1"
+                    android:src="@drawable/ic_car"
                     android:tint="@color/mintaxis_yellow" />
 
                 <TextView
