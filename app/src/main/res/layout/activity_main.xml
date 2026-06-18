@@ -11,55 +11,72 @@
         android:id="@+id/headerLayout"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:gravity="center_vertical"
-        android:background="@color/mintaxis_navy_dark"
-        android:paddingHorizontal="14dp"
-        android:paddingVertical="12dp"
+        android:orientation="vertical"
+        android:background="@drawable/promo_card_background"
+        android:paddingHorizontal="16dp"
+        android:paddingTop="16dp"
+        android:paddingBottom="14dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <ImageView
-            android:layout_width="22dp"
-            android:layout_height="22dp"
-            android:src="@drawable/ic_location"
-            android:tint="@color/mintaxis_yellow" />
-
+        <!-- Top Row -->
         <LinearLayout
-            android:layout_width="0dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:orientation="vertical"
-            android:layout_marginStart="10dp">
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
 
-            <TextView
-                android:layout_width="wrap_content"
+            <LinearLayout
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:text="Harare, Zimbabwe"
-                android:textColor="@color/mintaxis_text_primary"
-                android:textSize="14sp"
-                android:textStyle="bold" />
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="MIN Taxis - 24/7 Service"
-                android:textColor="@color/mintaxis_text_muted"
-                android:textSize="10sp" />
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/ic_navigation"
+                    android:tint="@color/mintaxis_yellow" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginStart="8dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Harare, Zimbabwe"
+                        android:textColor="@color/mintaxis_white"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="MIN Taxis | 24/7"
+                        android:textColor="#B3FFFFFF"
+                        android:textSize="10sp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!-- Call Button -->
+            <ImageButton
+                android:id="@+id/callDispatchButton"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/car_type_circle"
+                android:src="@drawable/ic_phone"
+                android:scaleType="centerInside"
+                android:tint="@color/mintaxis_yellow"
+                android:contentDescription="@string/call_dispatch" />
 
         </LinearLayout>
-
-        <!-- Call Dispatch Button -->
-        <ImageButton
-            android:id="@+id/callDispatchButton"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:background="@drawable/circle_background"
-            android:src="@drawable/ic_phone"
-            android:scaleType="centerInside"
-            android:tint="@color/mintaxis_green"
-            android:contentDescription="@string/call_dispatch" />
 
     </LinearLayout>
 

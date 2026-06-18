@@ -10,88 +10,76 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:padding="16dp">
+        android:orientation="vertical">
 
-        <!-- Header -->
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/wallet"
-            android:textColor="@color/mintaxis_text_primary"
-            android:textSize="24sp"
-            android:textStyle="bold" />
-
-        <!-- Balance Card -->
-        <com.google.android.material.card.MaterialCardView
-            style="@style/MinTaxis.Card"
+        <!-- Balance Banner -->
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="12dp"
-            app:cardBackgroundColor="@color/mintaxis_navy_dark">
+            android:orientation="vertical"
+            android:gravity="center"
+            android:background="@drawable/online_card_background"
+            android:padding="24dp">
 
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/available_balance"
+                android:textColor="#B3FFFFFF"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/balanceAmount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/balance_amount"
+                android:textColor="@color/mintaxis_yellow"
+                android:textSize="40sp"
+                android:textStyle="bold"
+                android:layout_marginTop="8dp" />
+
+            <!-- Action Buttons -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:padding="20dp">
+                android:orientation="horizontal"
+                android:layout_marginTop="20dp">
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/available_balance"
-                    android:textColor="@color/mintaxis_text_muted"
-                    android:textSize="13sp" />
-
-                <TextView
-                    android:id="@+id/balanceAmount"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/balance_amount"
-                    android:textColor="@color/mintaxis_yellow"
-                    android:textSize="32sp"
+                <Button
+                    android:id="@+id/topUpButton"
+                    android:layout_width="0dp"
+                    android:layout_height="48dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/premium_button_background"
+                    android:text="@string/top_up"
+                    android:textColor="@color/mintaxis_navy"
+                    android:textSize="14sp"
                     android:textStyle="bold"
-                    android:layout_marginTop="6dp" />
+                    android:layout_marginEnd="8dp" />
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:layout_marginTop="16dp">
-
-                    <Button
-                        android:id="@+id/topUpButton"
-                        style="@style/MinTaxis.Button.Primary"
-                        android:layout_width="0dp"
-                        android:layout_height="44dp"
-                        android:layout_weight="1"
-                        android:text="@string/top_up"
-                        android:textSize="13sp"
-                        android:layout_marginEnd="6dp" />
-
-                    <Button
-                        android:id="@+id/withdrawButton"
-                        style="@style/MinTaxis.Button.Secondary"
-                        android:layout_width="0dp"
-                        android:layout_height="44dp"
-                        android:layout_weight="1"
-                        android:text="@string/withdraw"
-                        android:textSize="13sp" />
-
-                </LinearLayout>
+                <Button
+                    android:id="@+id/withdrawButton"
+                    android:layout_width="0dp"
+                    android:layout_height="48dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/vehicle_option_background"
+                    android:text="@string/withdraw"
+                    android:textColor="@color/mintaxis_text_primary"
+                    android:textSize="14sp" />
 
             </LinearLayout>
 
-        </com.google.android.material.card.MaterialCardView>
+        </LinearLayout>
 
-        <!-- Payment Methods -->
+        <!-- Payment Methods Header -->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/payment_methods"
             android:textColor="@color/mintaxis_text_primary"
-            android:textSize="15sp"
+            android:textSize="16sp"
             android:textStyle="bold"
+            android:paddingHorizontal="16dp"
             android:layout_marginTop="20dp" />
 
         <!-- Cash -->
@@ -102,12 +90,13 @@
             android:orientation="horizontal"
             android:gravity="center_vertical"
             android:background="@drawable/location_item_background"
-            android:padding="14dp"
-            android:layout_marginTop="8dp">
+            android:padding="16dp"
+            android:layout_marginHorizontal="12dp"
+            android:layout_marginTop="10dp">
 
             <ImageView
-                android:layout_width="36dp"
-                android:layout_height="36dp"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
                 android:src="@drawable/ic_wallet"
                 android:tint="@color/mintaxis_yellow" />
 
@@ -116,14 +105,14 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:orientation="vertical"
-                android:layout_marginStart="12dp">
+                android:layout_marginStart="14dp">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/cash"
                     android:textColor="@color/mintaxis_text_primary"
-                    android:textSize="14sp"
+                    android:textSize="15sp"
                     android:textStyle="bold" />
 
                 <TextView
@@ -131,14 +120,14 @@
                     android:layout_height="wrap_content"
                     android:text="@string/pay_with_cash"
                     android:textColor="@color/mintaxis_text_muted"
-                    android:textSize="11sp" />
+                    android:textSize="12sp" />
 
             </LinearLayout>
 
             <RadioButton
                 android:id="@+id/cashRadio"
-                android:layout_width="22dp"
-                android:layout_height="22dp"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
                 android:buttonTint="@color/mintaxis_yellow"
                 android:checked="true" />
 
@@ -152,12 +141,13 @@
             android:orientation="horizontal"
             android:gravity="center_vertical"
             android:background="@drawable/location_item_background"
-            android:padding="14dp"
-            android:layout_marginTop="6dp">
+            android:padding="16dp"
+            android:layout_marginHorizontal="12dp"
+            android:layout_marginTop="8dp">
 
             <ImageView
-                android:layout_width="36dp"
-                android:layout_height="36dp"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
                 android:src="@drawable/ic_wallet"
                 android:tint="@color/mintaxis_green" />
 
@@ -166,14 +156,14 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:orientation="vertical"
-                android:layout_marginStart="12dp">
+                android:layout_marginStart="14dp">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/ecocash"
                     android:textColor="@color/mintaxis_text_primary"
-                    android:textSize="14sp"
+                    android:textSize="15sp"
                     android:textStyle="bold" />
 
                 <TextView
@@ -181,14 +171,14 @@
                     android:layout_height="wrap_content"
                     android:text="@string/mobile_money"
                     android:textColor="@color/mintaxis_text_muted"
-                    android:textSize="11sp" />
+                    android:textSize="12sp" />
 
             </LinearLayout>
 
             <RadioButton
                 android:id="@+id/ecocashRadio"
-                android:layout_width="22dp"
-                android:layout_height="22dp"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
                 android:buttonTint="@color/mintaxis_yellow" />
 
         </LinearLayout>
@@ -201,12 +191,13 @@
             android:orientation="horizontal"
             android:gravity="center_vertical"
             android:background="@drawable/location_item_background"
-            android:padding="14dp"
-            android:layout_marginTop="6dp">
+            android:padding="16dp"
+            android:layout_marginHorizontal="12dp"
+            android:layout_marginTop="8dp">
 
             <ImageView
-                android:layout_width="36dp"
-                android:layout_height="36dp"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
                 android:src="@drawable/ic_wallet"
                 android:tint="@color/mintaxis_orange" />
 
@@ -215,14 +206,14 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:orientation="vertical"
-                android:layout_marginStart="12dp">
+                android:layout_marginStart="14dp">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/travel_vouchers"
                     android:textColor="@color/mintaxis_text_primary"
-                    android:textSize="14sp"
+                    android:textSize="15sp"
                     android:textStyle="bold" />
 
                 <TextView
@@ -230,14 +221,14 @@
                     android:layout_height="wrap_content"
                     android:text="For contracted services"
                     android:textColor="@color/mintaxis_text_muted"
-                    android:textSize="11sp" />
+                    android:textSize="12sp" />
 
             </LinearLayout>
 
             <RadioButton
                 android:id="@+id/voucherRadio"
-                android:layout_width="22dp"
-                android:layout_height="22dp"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
                 android:buttonTint="@color/mintaxis_yellow" />
 
         </LinearLayout>
@@ -250,12 +241,14 @@
             android:orientation="horizontal"
             android:gravity="center_vertical"
             android:background="@drawable/location_item_background"
-            android:padding="14dp"
-            android:layout_marginTop="6dp">
+            android:padding="16dp"
+            android:layout_marginHorizontal="12dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="16dp">
 
             <ImageView
-                android:layout_width="36dp"
-                android:layout_height="36dp"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
                 android:src="@drawable/ic_wallet"
                 android:tint="@color/mintaxis_text_secondary" />
 
@@ -264,14 +257,14 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:orientation="vertical"
-                android:layout_marginStart="12dp">
+                android:layout_marginStart="14dp">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/corporate"
                     android:textColor="@color/mintaxis_text_primary"
-                    android:textSize="14sp"
+                    android:textSize="15sp"
                     android:textStyle="bold" />
 
                 <TextView
@@ -279,14 +272,14 @@
                     android:layout_height="wrap_content"
                     android:text="Prepaid service for companies"
                     android:textColor="@color/mintaxis_text_muted"
-                    android:textSize="11sp" />
+                    android:textSize="12sp" />
 
             </LinearLayout>
 
             <RadioButton
                 android:id="@+id/corporateRadio"
-                android:layout_width="22dp"
-                android:layout_height="22dp"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
                 android:buttonTint="@color/mintaxis_yellow" />
 
         </LinearLayout>

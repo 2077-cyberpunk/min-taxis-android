@@ -1,30 +1,50 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout 
+<LinearLayout 
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/mintaxis_navy">
+    android:orientation="vertical"
+    android:background="@drawable/driver_card_background"
+    android:gravity="center_horizontal">
 
-    <!-- Radar Animation Container -->
+    <!-- Top Status -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:padding="16dp">
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/ic_clock"
+            android:tint="@color/mintaxis_yellow" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Estimated arrival: 3-5 min"
+            android:textColor="@color/mintaxis_text_secondary"
+            android:textSize="14sp"
+            android:layout_marginStart="10dp" />
+
+    </LinearLayout>
+
+    <!-- Radar Animation -->
     <FrameLayout
-        android:id="@+id/radarContainer"
-        android:layout_width="220dp"
-        android:layout_height="220dp"
-        app:layout_constraintBottom_toTopOf="@id/statusText"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_chainStyle="packed">
+        android:layout_width="240dp"
+        android:layout_height="240dp"
+        android:layout_gravity="center_horizontal">
 
-        <!-- Radar Background -->
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:src="@drawable/radar_background"
             android:scaleType="fitCenter" />
 
-        <!-- Radar Sweep -->
         <ImageView
             android:id="@+id/radarSweep"
             android:layout_width="match_parent"
@@ -32,52 +52,88 @@
             android:src="@drawable/radar_sweep"
             android:scaleType="fitCenter" />
 
-        <!-- Center Icon -->
-        <ImageView
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:src="@drawable/ic_profile"
-            android:background="@drawable/circle_background"
-            android:padding="10dp"
-            android:tint="@color/mintaxis_yellow"
-            android:layout_gravity="center" />
+        <!-- Center User Avatar -->
+        <FrameLayout
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_gravity="center">
 
-        <!-- Driver Dots -->
-        <ImageView
-            android:id="@+id/driverDot1"
-            android:layout_width="36dp"
-            android:layout_height="36dp"
-            android:src="@drawable/ic_car"
-            android:background="@drawable/dot_background"
-            android:padding="6dp"
-            android:tint="@color/mintaxis_yellow"
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/avatar_border_background" />
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/ic_profile"
+                android:layout_gravity="center"
+                android:tint="@color/mintaxis_white" />
+
+        </FrameLayout>
+
+        <!-- Driver 1 -->
+        <FrameLayout
+            android:layout_width="48dp"
+            android:layout_height="48dp"
             android:layout_gravity="top|start"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="24dp" />
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="30dp">
 
-        <ImageView
-            android:id="@+id/driverDot2"
-            android:layout_width="36dp"
-            android:layout_height="36dp"
-            android:src="@drawable/ic_car"
-            android:background="@drawable/dot_background"
-            android:padding="6dp"
-            android:tint="@color/mintaxis_yellow"
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/car_type_circle" />
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_car_white"
+                android:layout_gravity="center" />
+
+        </FrameLayout>
+
+        <!-- Driver 2 -->
+        <FrameLayout
+            android:layout_width="48dp"
+            android:layout_height="48dp"
             android:layout_gravity="bottom|end"
             android:layout_marginEnd="16dp"
-            android:layout_marginBottom="32dp" />
+            android:layout_marginBottom="36dp">
 
-        <ImageView
-            android:id="@+id/driverDot3"
-            android:layout_width="36dp"
-            android:layout_height="36dp"
-            android:src="@drawable/ic_car"
-            android:background="@drawable/dot_background"
-            android:padding="6dp"
-            android:tint="@color/mintaxis_yellow"
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/car_type_circle" />
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_car_white"
+                android:layout_gravity="center" />
+
+        </FrameLayout>
+
+        <!-- Driver 3 -->
+        <FrameLayout
+            android:layout_width="48dp"
+            android:layout_height="48dp"
             android:layout_gravity="top|end"
             android:layout_marginEnd="24dp"
-            android:layout_marginTop="40dp" />
+            android:layout_marginTop="44dp">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/car_type_circle" />
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_car_white"
+                android:layout_gravity="center" />
+
+        </FrameLayout>
 
     </FrameLayout>
 
@@ -88,26 +144,20 @@
         android:layout_height="wrap_content"
         android:text="@string/finding_drivers"
         android:textColor="@color/mintaxis_text_primary"
-        android:textSize="18sp"
+        android:textSize="20sp"
         android:textStyle="bold"
-        android:layout_marginTop="24dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/radarContainer" />
+        android:layout_marginTop="24dp" />
 
     <TextView
         android:id="@+id/subtitleText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/looking_for_best"
-        android:textColor="@color/mintaxis_text_muted"
-        android:textSize="13sp"
+        android:textColor="@color/mintaxis_text_secondary"
+        android:textSize="14sp"
         android:layout_marginTop="6dp"
         android:gravity="center"
-        android:paddingHorizontal="32dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/statusText" />
+        android:paddingHorizontal="40dp" />
 
     <!-- Progress Bar -->
     <ProgressBar
@@ -119,22 +169,44 @@
         android:progress="0"
         android:progressDrawable="@drawable/progress_drawable"
         android:layout_marginTop="24dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/subtitleText" />
+        android:layout_marginHorizontal="40dp" />
+
+    <!-- Safety Info -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginTop="20dp"
+        android:paddingHorizontal="32dp">
+
+        <ImageView
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:src="@drawable/ic_shield"
+            android:tint="@color/mintaxis_text_muted" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="  Driver verified | Route monitored"
+            android:textColor="@color/mintaxis_text_muted"
+            android:textSize="12sp" />
+
+    </LinearLayout>
 
     <!-- Cancel Button -->
     <Button
         android:id="@+id/cancelButton"
-        style="@style/MinTaxis.Button.Secondary"
         android:layout_width="0dp"
         android:layout_height="50dp"
-        android:text="@string/cancel"
-        android:textSize="15sp"
+        android:layout_marginHorizontal="32dp"
         android:layout_marginBottom="40dp"
-        android:layout_marginHorizontal="24dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        android:background="@drawable/vehicle_option_background"
+        android:text="@string/cancel"
+        android:textColor="@color/mintaxis_text_primary"
+        android:textSize="16sp"
+        android:layout_gravity="bottom"
+        android:layout_marginTop="32dp" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>

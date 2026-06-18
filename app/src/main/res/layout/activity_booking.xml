@@ -1,379 +1,392 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView 
+<LinearLayout 
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/mintaxis_navy"
-    android:fillViewport="true">
+    android:orientation="vertical"
+    android:background="@color/mintaxis_navy">
 
+    <!-- Header -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:padding="16dp">
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:background="@color/mintaxis_navy_dark"
+        android:paddingHorizontal="16dp"
+        android:paddingVertical="14dp">
 
-        <!-- Header -->
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:gravity="center_vertical">
+        <ImageButton
+            android:id="@+id/backButton"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/circle_background"
+            android:src="@drawable/ic_back"
+            android:scaleType="centerInside"
+            android:tint="@color/mintaxis_white"
+            android:contentDescription="Back" />
 
-            <ImageButton
-                android:id="@+id/backButton"
-                android:layout_width="44dp"
-                android:layout_height="44dp"
-                android:background="@drawable/circle_background"
-                android:src="@drawable/ic_back"
-                android:scaleType="centerInside"
-                android:tint="@color/mintaxis_white"
-                android:contentDescription="Back" />
-
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="@string/book_a_ride"
-                android:textColor="@color/mintaxis_text_primary"
-                android:textSize="20sp"
-                android:textStyle="bold"
-                android:gravity="center"
-                android:layout_marginEnd="44dp" />
-
-        </LinearLayout>
-
-        <!-- Location Inputs Card -->
-        <com.google.android.material.card.MaterialCardView
-            style="@style/MinTaxis.Card"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp">
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:padding="14dp">
-
-                <!-- Pickup Location -->
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:gravity="center_vertical">
-
-                    <ImageView
-                        android:layout_width="22dp"
-                        android:layout_height="22dp"
-                        android:src="@drawable/ic_circle"
-                        android:tint="@color/mintaxis_green" />
-
-                    <EditText
-                        android:id="@+id/pickupLocation"
-                        android:layout_width="0dp"
-                        android:layout_height="48dp"
-                        android:layout_weight="1"
-                        android:hint="@string/pick_up_location"
-                        android:inputType="text"
-                        android:textColor="@color/mintaxis_text_primary"
-                        android:textColorHint="@color/mintaxis_text_muted"
-                        android:textSize="15sp"
-                        android:paddingHorizontal="14dp"
-                        android:background="@drawable/edit_text_background"
-                        android:layout_marginStart="10dp" />
-
-                </LinearLayout>
-
-                <!-- Divider Line -->
-                <View
-                    android:layout_width="2dp"
-                    android:layout_height="20dp"
-                    android:background="@color/mintaxis_navy_light"
-                    android:layout_marginStart="10dp" />
-
-                <!-- Destination -->
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:gravity="center_vertical">
-
-                    <ImageView
-                        android:layout_width="22dp"
-                        android:layout_height="22dp"
-                        android:src="@drawable/ic_square"
-                        android:tint="@color/mintaxis_red" />
-
-                    <EditText
-                        android:id="@+id/destination"
-                        android:layout_width="0dp"
-                        android:layout_height="48dp"
-                        android:layout_weight="1"
-                        android:hint="@string/destination_hint"
-                        android:inputType="text"
-                        android:textColor="@color/mintaxis_text_primary"
-                        android:textColorHint="@color/mintaxis_text_muted"
-                        android:textSize="15sp"
-                        android:paddingHorizontal="14dp"
-                        android:background="@drawable/edit_text_background"
-                        android:layout_marginStart="10dp" />
-
-                </LinearLayout>
-
-            </LinearLayout>
-
-        </com.google.android.material.card.MaterialCardView>
-
-        <!-- Fare Section -->
-        <com.google.android.material.card.MaterialCardView
-            style="@style/MinTaxis.Card"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="12dp">
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:padding="14dp">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/set_your_fare"
-                    android:textColor="@color/mintaxis_text_primary"
-                    android:textSize="15sp"
-                    android:textStyle="bold" />
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:gravity="center_vertical"
-                    android:layout_marginTop="12dp">
-
-                    <SeekBar
-                        android:id="@+id/fareSeekBar"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:max="80"
-                        android:progress="15"
-                        android:progressTint="@color/mintaxis_yellow"
-                        android:thumbTint="@color/mintaxis_yellow" />
-
-                    <TextView
-                        android:id="@+id/fareValue"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="$20"
-                        android:textColor="@color/mintaxis_yellow"
-                        android:textSize="22sp"
-                        android:textStyle="bold"
-                        android:layout_marginStart="12dp" />
-
-                </LinearLayout>
-
-                <!-- Fare Suggestions -->
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:layout_marginTop="12dp">
-
-                    <TextView
-                        android:id="@+id/suggestion1"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:text="$15"
-                        android:textColor="@color/mintaxis_text_muted"
-                        android:textSize="13sp"
-                        android:gravity="center"
-                        android:background="@drawable/suggestion_background"
-                        android:padding="10dp"
-                        android:layout_marginEnd="6dp" />
-
-                    <TextView
-                        android:id="@+id/suggestion2"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:text="$20"
-                        android:textColor="@color/mintaxis_yellow"
-                        android:textSize="13sp"
-                        android:gravity="center"
-                        android:background="@drawable/suggestion_selected_background"
-                        android:padding="10dp"
-                        android:layout_marginEnd="6dp" />
-
-                    <TextView
-                        android:id="@+id/suggestion3"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:text="$25"
-                        android:textColor="@color/mintaxis_text_muted"
-                        android:textSize="13sp"
-                        android:gravity="center"
-                        android:background="@drawable/suggestion_background"
-                        android:padding="10dp"
-                        android:layout_marginEnd="6dp" />
-
-                    <TextView
-                        android:id="@+id/suggestion4"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:text="$30"
-                        android:textColor="@color/mintaxis_text_muted"
-                        android:textSize="13sp"
-                        android:gravity="center"
-                        android:background="@drawable/suggestion_background"
-                        android:padding="10dp" />
-
-                </LinearLayout>
-
-            </LinearLayout>
-
-        </com.google.android.material.card.MaterialCardView>
-
-        <!-- Vehicle Selection -->
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:text="@string/choose_vehicle"
+            android:layout_weight="1"
+            android:text="@string/book_a_ride"
             android:textColor="@color/mintaxis_text_primary"
-            android:textSize="15sp"
+            android:textSize="20sp"
             android:textStyle="bold"
-            android:layout_marginTop="16dp" />
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_marginTop="8dp">
-
-            <!-- Sedan -->
-            <LinearLayout
-                android:id="@+id/sedanOption"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:orientation="vertical"
-                android:gravity="center"
-                android:background="@drawable/vehicle_option_selected_background"
-                android:padding="14dp"
-                android:layout_marginEnd="6dp">
-
-                <ImageView
-                    android:layout_width="36dp"
-                    android:layout_height="36dp"
-                    android:src="@drawable/ic_car"
-                    android:tint="@color/mintaxis_yellow" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/sedan"
-                    android:textColor="@color/mintaxis_text_primary"
-                    android:textSize="13sp"
-                    android:textStyle="bold"
-                    android:layout_marginTop="6dp" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/sedan_capacity"
-                    android:textColor="@color/mintaxis_text_muted"
-                    android:textSize="10sp" />
-
-            </LinearLayout>
-
-            <!-- SUV -->
-            <LinearLayout
-                android:id="@+id/suvOption"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:orientation="vertical"
-                android:gravity="center"
-                android:background="@drawable/vehicle_option_background"
-                android:padding="14dp"
-                android:layout_marginEnd="6dp">
-
-                <ImageView
-                    android:layout_width="36dp"
-                    android:layout_height="36dp"
-                    android:src="@drawable/ic_car"
-                    android:tint="@color/mintaxis_text_muted" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/suv"
-                    android:textColor="@color/mintaxis_text_primary"
-                    android:textSize="13sp"
-                    android:textStyle="bold"
-                    android:layout_marginTop="6dp" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/suv_capacity"
-                    android:textColor="@color/mintaxis_text_muted"
-                    android:textSize="10sp" />
-
-            </LinearLayout>
-
-            <!-- Van -->
-            <LinearLayout
-                android:id="@+id/vanOption"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:orientation="vertical"
-                android:gravity="center"
-                android:background="@drawable/vehicle_option_background"
-                android:padding="14dp">
-
-                <ImageView
-                    android:layout_width="36dp"
-                    android:layout_height="36dp"
-                    android:src="@drawable/ic_car"
-                    android:tint="@color/mintaxis_text_muted" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/van"
-                    android:textColor="@color/mintaxis_text_primary"
-                    android:textSize="13sp"
-                    android:textStyle="bold"
-                    android:layout_marginTop="6dp" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/van_capacity"
-                    android:textColor="@color/mintaxis_text_muted"
-                    android:textSize="10sp" />
-
-            </LinearLayout>
-
-        </LinearLayout>
-
-        <!-- Find Drivers Button -->
-        <Button
-            android:id="@+id/findDriversButton"
-            style="@style/MinTaxis.Button.Primary"
-            android:layout_width="match_parent"
-            android:layout_height="52dp"
-            android:text="@string/find_drivers"
-            android:textSize="16sp"
-            android:layout_marginTop="20dp"
-            android:layout_marginBottom="8dp" />
+            android:gravity="center"
+            android:layout_marginEnd="40dp" />
 
     </LinearLayout>
-</ScrollView>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- Location Card -->
+            <com.google.android.material.card.MaterialCardView
+                style="@style/MinTaxis.Card"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <!-- Pickup -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical">
+
+                        <ImageView
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:src="@drawable/ic_navigation"
+                            android:tint="@color/mintaxis_green" />
+
+                        <EditText
+                            android:id="@+id/pickupLocation"
+                            android:layout_width="0dp"
+                            android:layout_height="50dp"
+                            android:layout_weight="1"
+                            android:hint="@string/pick_up_location"
+                            android:inputType="text"
+                            android:textColor="@color/mintaxis_text_primary"
+                            android:textColorHint="@color/mintaxis_text_muted"
+                            android:textSize="15sp"
+                            android:paddingHorizontal="14dp"
+                            android:background="@drawable/edit_text_background"
+                            android:layout_marginStart="12dp" />
+
+                    </LinearLayout>
+
+                    <!-- Dotted Line -->
+                    <View
+                        android:layout_width="2dp"
+                        android:layout_height="24dp"
+                        android:background="@color/mintaxis_navy_light"
+                        android:layout_marginStart="11dp" />
+
+                    <!-- Destination -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical">
+
+                        <ImageView
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:src="@drawable/ic_map_pin"
+                            android:tint="@color/mintaxis_red" />
+
+                        <EditText
+                            android:id="@+id/destination"
+                            android:layout_width="0dp"
+                            android:layout_height="50dp"
+                            android:layout_weight="1"
+                            android:hint="@string/destination_hint"
+                            android:inputType="text"
+                            android:textColor="@color/mintaxis_text_primary"
+                            android:textColorHint="@color/mintaxis_text_muted"
+                            android:textSize="15sp"
+                            android:paddingHorizontal="14dp"
+                            android:background="@drawable/edit_text_background"
+                            android:layout_marginStart="12dp" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Fare Card -->
+            <com.google.android.material.card.MaterialCardView
+                style="@style/MinTaxis.Card"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/set_your_fare"
+                        android:textColor="@color/mintaxis_text_primary"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:layout_marginTop="12dp">
+
+                        <SeekBar
+                            android:id="@+id/fareSeekBar"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:max="80"
+                            android:progress="15"
+                            android:progressTint="@color/mintaxis_yellow"
+                            android:thumbTint="@color/mintaxis_yellow" />
+
+                        <TextView
+                            android:id="@+id/fareValue"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="$20"
+                            android:textColor="@color/mintaxis_yellow"
+                            android:textSize="24sp"
+                            android:textStyle="bold"
+                            android:layout_marginStart="12dp" />
+
+                    </LinearLayout>
+
+                    <!-- Fare Suggestions -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="12dp">
+
+                        <TextView
+                            android:id="@+id/suggestion1"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="$15"
+                            android:textColor="@color/mintaxis_text_muted"
+                            android:textSize="13sp"
+                            android:gravity="center"
+                            android:background="@drawable/suggestion_background"
+                            android:padding="12dp"
+                            android:layout_marginEnd="4dp" />
+
+                        <TextView
+                            android:id="@+id/suggestion2"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="$20"
+                            android:textColor="@color/mintaxis_yellow"
+                            android:textSize="13sp"
+                            android:gravity="center"
+                            android:background="@drawable/suggestion_selected_background"
+                            android:padding="12dp"
+                            android:layout_marginHorizontal="4dp" />
+
+                        <TextView
+                            android:id="@+id/suggestion3"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="$25"
+                            android:textColor="@color/mintaxis_text_muted"
+                            android:textSize="13sp"
+                            android:gravity="center"
+                            android:background="@drawable/suggestion_background"
+                            android:padding="12dp"
+                            android:layout_marginHorizontal="4dp" />
+
+                        <TextView
+                            android:id="@+id/suggestion4"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="$30"
+                            android:textColor="@color/mintaxis_text_muted"
+                            android:textSize="13sp"
+                            android:gravity="center"
+                            android:background="@drawable/suggestion_background"
+                            android:padding="12dp"
+                            android:layout_marginStart="4dp" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Vehicle Selection -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/choose_vehicle"
+                android:textColor="@color/mintaxis_text_primary"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:layout_marginTop="16dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="8dp">
+
+                <!-- Sedan -->
+                <LinearLayout
+                    android:id="@+id/sedanOption"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:background="@drawable/vehicle_option_selected_background"
+                    android:padding="14dp"
+                    android:layout_marginEnd="6dp">
+
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:src="@drawable/ic_car_white"
+                        android:layout_gravity="center" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/sedan"
+                        android:textColor="@color/mintaxis_text_primary"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:layout_marginTop="8dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/sedan_capacity"
+                        android:textColor="@color/mintaxis_text_muted"
+                        android:textSize="11sp" />
+
+                </LinearLayout>
+
+                <!-- SUV -->
+                <LinearLayout
+                    android:id="@+id/suvOption"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:background="@drawable/vehicle_option_background"
+                    android:padding="14dp"
+                    android:layout_marginEnd="6dp">
+
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:src="@drawable/ic_car"
+                        android:layout_gravity="center" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/suv"
+                        android:textColor="@color/mintaxis_text_primary"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:layout_marginTop="8dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/suv_capacity"
+                        android:textColor="@color/mintaxis_text_muted"
+                        android:textSize="11sp" />
+
+                </LinearLayout>
+
+                <!-- Van -->
+                <LinearLayout
+                    android:id="@+id/vanOption"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:background="@drawable/vehicle_option_background"
+                    android:padding="14dp">
+
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:src="@drawable/ic_car"
+                        android:layout_gravity="center" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/van"
+                        android:textColor="@color/mintaxis_text_primary"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:layout_marginTop="8dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/van_capacity"
+                        android:textColor="@color/mintaxis_text_muted"
+                        android:textSize="11sp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!-- Find Drivers Button -->
+            <Button
+                android:id="@+id/findDriversButton"
+                android:layout_width="match_parent"
+                android:layout_height="54dp"
+                android:background="@drawable/premium_button_background"
+                android:text="@string/find_drivers"
+                android:textColor="@color/mintaxis_navy"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:layout_marginTop="20dp" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>
