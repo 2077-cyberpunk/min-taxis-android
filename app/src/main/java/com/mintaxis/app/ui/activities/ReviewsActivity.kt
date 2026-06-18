@@ -168,7 +168,7 @@ class ReviewsActivity : AppCompatActivity() {
         }
         for (i in 1..5) {
             val star = TextView(this).apply {
-                text = if (i <= rating) "★" else "☆"
+                this.text = if (i <= rating) "★" else "☆"
                 setTextColor(getColor(R.color.mintaxis_yellow))
                 textSize = 16f
             }
