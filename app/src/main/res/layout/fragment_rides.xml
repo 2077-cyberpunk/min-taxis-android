@@ -30,9 +30,9 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
             android:background="@color/mintaxis_navy_dark"
-            android:tabIndicatorColor="@color/mintaxis_yellow"
-            android:tabSelectedTextColor="@color/mintaxis_yellow"
-            android:tabTextColor="@color/mintaxis_text_muted"
+            app:tabIndicatorColor="@color/mintaxis_yellow"
+            app:tabSelectedTextColor="@color/mintaxis_yellow"
+            app:tabTextColor="@color/mintaxis_text_muted"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/ridesTitle">

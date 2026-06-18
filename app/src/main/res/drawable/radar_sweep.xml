@@ -1,15 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rotate xmlns:android="http://schemas.android.com/apk/res/android"
-    android:fromDegrees="0"
-    android:toDegrees="360"
-    android:pivotX="50%"
-    android:pivotY="50%"
-    android:duration="2000">
-    <shape android:shape="triangle">
-        <gradient
-            android:startColor="#44FDD835"
-            android:endColor="#00FDD835"
-            android:type="linear"
-            android:angle="0" />
-    </shape>
-</rotate>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+    <gradient
+        android:startColor="#44FDD835"
+        android:endColor="#00FDD835"
+        android:angle="0" />
+</shape>

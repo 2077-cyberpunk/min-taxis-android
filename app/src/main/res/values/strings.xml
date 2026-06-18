@@ -31,7 +31,7 @@
     <string name="destination">Destination</string>
     <string name="set_your_fare">Set Your Fare</string>
     <string name="find_drivers">Find Drivers</string>
-    <string name="suggested_fare">Suggested: $%d-%d</string>
+    <string name="suggested_fare" formatted="false">Suggested: $12-18</string>
     <string name="your_offer">Your offer: $%d</string>
     
     <!-- Vehicle Types -->
