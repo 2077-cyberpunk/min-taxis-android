@@ -553,7 +553,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="\"The voucher system is a game-changer. Seamless and secure transactions without carrying cash.\""
+                android:text="The voucher system is a game-changer. Seamless and secure transactions without carrying cash."
                 android:textColor="@color/mintaxis_white"
                 android:textSize="13sp"
                 android:layout_marginTop="8dp"
