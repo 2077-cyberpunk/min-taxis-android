@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Base application theme -->
+    <style name="Theme.MinTaxis" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Primary brand colors -->
+        <item name="colorPrimary">@color/mintaxis_navy</item>
+        <item name="colorPrimaryDark">@color/mintaxis_navy_dark</item>
+        <item name="colorAccent">@color/mintaxis_yellow</item>
+        
+        <!-- Background colors -->
+        <item name="android:windowBackground">@color/mintaxis_background</item>
+        <item name="android:statusBarColor">@color/mintaxis_navy_dark</item>
+        <item name="android:navigationBarColor">@color/mintaxis_navy_dark</item>
+        
+        <!-- Text colors -->
+        <item name="android:textColorPrimary">@color/mintaxis_text_primary</item>
+        <item name="android:textColorSecondary">@color/mintaxis_text_secondary</item>
+        
+        <!-- Widget colors -->
+        <item name="colorButtonNormal">@color/mintaxis_yellow</item>
+        <item name="colorControlNormal">@color/mintaxis_text_secondary</item>
+        <item name="colorControlActivated">@color/mintaxis_yellow</item>
+    </style>
+
+    <!-- Splash Screen Theme -->
+    <style name="Theme.MinTaxis.Splash" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="android:windowBackground">@drawable/splash_background</item>
+        <item name="android:statusBarColor">@color/mintaxis_navy</item>
+        <item name="android:navigationBarColor">@color/mintaxis_navy</item>
+    </style>
+
+    <!-- Login Theme -->
+    <style name="Theme.MinTaxis.Login" parent="Theme.MinTaxis">
+        <item name="android:windowBackground">@color/mintaxis_navy</item>
+    </style>
+
+    <!-- Button Styles -->
+    <style name="MinTaxis.Button.Primary" parent="Widget.MaterialComponents.Button">
+        <item name="backgroundTint">@color/mintaxis_yellow</item>
+        <item name="android:textColor">@color/mintaxis_navy</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="cornerRadius">12dp</item>
+        <item name="android:paddingTop">14dp</item>
+        <item name="android:paddingBottom">14dp</item>
+    </style>
+
+    <style name="MinTaxis.Button.Secondary" parent="Widget.MaterialComponents.Button.OutlinedButton">
+        <item name="strokeColor">@color/mintaxis_yellow</item>
+        <item name="android:textColor">@color/mintaxis_yellow</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="cornerRadius">12dp</item>
+        <item name="android:paddingTop">14dp</item>
+        <item name="android:paddingBottom">14dp</item>
+    </style>
+
+    <!-- Card Styles -->
+    <style name="MinTaxis.Card" parent="Widget.MaterialComponents.CardView">
+        <item name="cardBackgroundColor">@color/mintaxis_card</item>
+        <item name="cardCornerRadius">16dp</item>
+        <item name="cardElevation">4dp</item>
+        <item name="strokeColor">@color/mintaxis_navy_light</item>
+        <item name="strokeWidth">1dp</item>
+    </style>
+
+    <!-- Input Styles -->
+    <style name="MinTaxis.TextInput" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <item name="boxBackgroundColor">@color/mintaxis_navy_dark</item>
+        <item name="boxStrokeColor">@color/mintaxis_yellow</item>
+        <item name="hintTextColor">@color/mintaxis_yellow</item>
+        <item name="android:textColorHint">@color/mintaxis_text_muted</item>
+        <item name="boxCornerRadiusTopStart">12dp</item>
+        <item name="boxCornerRadiusTopEnd">12dp</item>
+        <item name="boxCornerRadiusBottomStart">12dp</item>
+        <item name="boxCornerRadiusBottomEnd">12dp</item>
+    </style>
+
+    <!-- TextView Styles -->
+    <style name="MinTaxis.TextStyle" parent="TextAppearance.MaterialComponents.Body1">
+        <item name="android:textColor">@color/mintaxis_text_primary</item>
+        <item name="android:fontFamily">sans-serif</item>
+    </style>
+
+    <style name="MinTaxis.TextStyle.Heading" parent="TextAppearance.MaterialComponents.Headline5">
+        <item name="android:textColor">@color/mintaxis_text_primary</item>
+        <item name="android:textSize">24sp</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+    </style>
+
+    <style name="MinTaxis.TextStyle.Subheading" parent="TextAppearance.MaterialComponents.Subtitle1">
+        <item name="android:textColor">@color/mintaxis_text_secondary</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+</resources>

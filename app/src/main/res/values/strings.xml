@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">MIN Taxis</string>
+    <string name="tagline">Total Transport Solutions</string>
+    
+    <!-- Login & Registration -->
+    <string name="login">Login</string>
+    <string name="register">Register</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="phone_number">Phone Number</string>
+    <string name="full_name">Full Name</string>
+    <string name="forgot_password">Forgot Password?</string>
+    <string name="dont_have_account">Don\'t have an account?</string>
+    <string name="already_have_account">Already have an account?</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="sign_in">Sign In</string>
+    <string name="or_continue_with">or continue with</string>
+    
+    <!-- Navigation -->
+    <string name="home">Home</string>
+    <string name="rides">Rides</string>
+    <string name="wallet">Wallet</string>
+    <string name="profile">Profile</string>
+    <string name="settings">Settings</string>
+    
+    <!-- Booking -->
+    <string name="book_ride">Book a Ride</string>
+    <string name="where_to">Where to?</string>
+    <string name="pick_up_location">Pick-up location</string>
+    <string name="destination">Destination</string>
+    <string name="set_your_fare">Set Your Fare</string>
+    <string name="find_drivers">Find Drivers</string>
+    <string name="suggested_fare">Suggested: $%d-%d</string>
+    <string name="your_offer">Your offer: $%d</string>
+    
+    <!-- Vehicle Types -->
+    <string name="sedan">Sedan</string>
+    <string name="suv">SUV</string>
+    <string name="van">Van</string>
+    <string name="sedan_capacity">1-4 passengers</string>
+    <string name="suv_capacity">1-6 passengers</string>
+    <string name="van_capacity">1-8 passengers</string>
+    
+    <!-- Driver Matching -->
+    <string name="finding_drivers">Finding drivers near you...</string>
+    <string name="looking_for_best">Looking for the best drivers for your trip</string>
+    <string name="cancel">Cancel</string>
+    <string name="accept">Accept</string>
+    <string name="decline">Decline</string>
+    
+    <!-- Ride -->
+    <string name="ride_in_progress">Ride in Progress</string>
+    <string name="arriving_in">Arriving in %d min</string>
+    <string name="trip_to">Trip to %s</string>
+    <string name="rate_your_ride">Rate Your Ride</string>
+    <string name="share_trip">Share Trip</string>
+    <string name="emergency">Emergency</string>
+    
+    <!-- Driver -->
+    <string name="go_online">Go Online</string>
+    <string name="go_offline">Go Offline</string>
+    <string name="todays_earnings">Today\'s Earnings</string>
+    <string name="total_trips">Total Trips</string>
+    <string name="new_request">New Request</string>
+    <string name="rider_offers">Rider offers:</string>
+    
+    <!-- Safety -->
+    <string name="sos_button">SOS</string>
+    <string name="emergency_alert">Emergency Alert</string>
+    <string name="share_location">Share Location</string>
+    <string name="trip_recording">Trip Recording</string>
+    <string name="driver_verified">Driver Verified</string>
+    <string name="route_monitored">Route Monitored</string>
+    
+    <!-- Payment -->
+    <string name="cash">Cash</string>
+    <string name="ecocash">EcoCash</string>
+    <string name="visa">Visa</string>
+    <string name="mastercard">Mastercard</string>
+    <string name="corporate">Corporate</string>
+    
+    <!-- General -->
+    <string name="save">Save</string>
+    <string name="cancel_action">Cancel</string>
+    <string name="confirm">Confirm</string>
+    <string name="loading">Loading...</string>
+    <string name="error">Error</string>
+    <string name="success">Success</string>
+    <string name="no_internet">No internet connection</string>
+    <string name="location_permission">Location permission required</string>
+    
+    <!-- Google Maps -->
+    <string name="google_maps_key">YOUR_GOOGLE_MAPS_API_KEY</string>
+</resources>
