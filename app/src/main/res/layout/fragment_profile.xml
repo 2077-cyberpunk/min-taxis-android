@@ -410,6 +410,142 @@
 
             </LinearLayout>
 
+            <!-- Promotions & Offers -->
+            <LinearLayout
+                android:id="@+id/promotionsItem"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:background="@drawable/location_item_background"
+                android:padding="16dp"
+                android:layout_marginTop="6dp">
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/ic_add"
+                    android:tint="@color/mintaxis_yellow" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Promotions &amp; Offers"
+                    android:textColor="@color/mintaxis_text_primary"
+                    android:textSize="15sp"
+                    android:layout_marginStart="14dp" />
+
+                <ImageView
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:src="@drawable/ic_arrow_forward"
+                    android:tint="@color/mintaxis_text_muted" />
+
+            </LinearLayout>
+
+            <!-- Help & Support -->
+            <LinearLayout
+                android:id="@+id/helpSupportItem"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:background="@drawable/location_item_background"
+                android:padding="16dp"
+                android:layout_marginTop="6dp">
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/ic_help"
+                    android:tint="@color/mintaxis_yellow" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Help &amp; Support"
+                    android:textColor="@color/mintaxis_text_primary"
+                    android:textSize="15sp"
+                    android:layout_marginStart="14dp" />
+
+                <ImageView
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:src="@drawable/ic_arrow_forward"
+                    android:tint="@color/mintaxis_text_muted" />
+
+            </LinearLayout>
+
+            <!-- Settings -->
+            <LinearLayout
+                android:id="@+id/settingsItem"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:background="@drawable/location_item_background"
+                android:padding="16dp"
+                android:layout_marginTop="6dp">
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/ic_settings"
+                    android:tint="@color/mintaxis_yellow" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Settings"
+                    android:textColor="@color/mintaxis_text_primary"
+                    android:textSize="15sp"
+                    android:layout_marginStart="14dp" />
+
+                <ImageView
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:src="@drawable/ic_arrow_forward"
+                    android:tint="@color/mintaxis_text_muted" />
+
+            </LinearLayout>
+
+            <!-- Share App -->
+            <LinearLayout
+                android:id="@+id/shareAppItem"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:background="@drawable/location_item_background"
+                android:padding="16dp"
+                android:layout_marginTop="6dp">
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/ic_share"
+                    android:tint="@color/mintaxis_yellow" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Share MIN Taxis"
+                    android:textColor="@color/mintaxis_text_primary"
+                    android:textSize="15sp"
+                    android:layout_marginStart="14dp" />
+
+                <ImageView
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:src="@drawable/ic_arrow_forward"
+                    android:tint="@color/mintaxis_text_muted" />
+
+            </LinearLayout>
+
             <!-- About Us -->
             <LinearLayout
                 android:id="@+id/aboutItem"

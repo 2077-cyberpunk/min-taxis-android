@@ -10,6 +10,7 @@ import androidx.fragment.app.Fragment
 import com.mintaxis.app.R
 import com.mintaxis.app.ui.activities.BookingActivity
 import com.mintaxis.app.ui.activities.GalleryActivity
+import com.mintaxis.app.ui.activities.PromotionsActivity
 import com.mintaxis.app.ui.activities.ReviewsActivity
 
 class HomeFragment : Fragment() {
@@ -50,6 +51,10 @@ class HomeFragment : Fragment() {
 
         view.findViewById<View>(R.id.exploreFleetButton)?.setOnClickListener {
             openGallery()
+        }
+
+        view.findViewById<View>(R.id.promotionsButton)?.setOnClickListener {
+            openPromotions()
         }
 
         view.findViewById<View>(R.id.recentLocation1)?.setOnClickListener { openBooking() }
@@ -107,6 +112,14 @@ class HomeFragment : Fragment() {
     private fun openGallery() {
         try {
             startActivity(Intent(requireContext(), GalleryActivity::class.java))
+        } catch (e: Exception) {
+            Toast.makeText(requireContext(), "Error: ${e.message}", Toast.LENGTH_SHORT).show()
+        }
+    }
+
+    private fun openPromotions() {
+        try {
+            startActivity(Intent(requireContext(), PromotionsActivity::class.java))
         } catch (e: Exception) {
             Toast.makeText(requireContext(), "Error: ${e.message}", Toast.LENGTH_SHORT).show()
         }

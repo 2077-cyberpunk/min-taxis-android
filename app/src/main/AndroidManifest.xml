@@ -63,6 +63,21 @@
             android:exported="false"
             android:theme="@style/Theme.MinTaxis" />
 
+        <activity
+            android:name=".ui.activities.PromotionsActivity"
+            android:exported="false"
+            android:theme="@style/Theme.MinTaxis" />
+
+        <activity
+            android:name=".ui.activities.HelpSupportActivity"
+            android:exported="false"
+            android:theme="@style/Theme.MinTaxis" />
+
+        <activity
+            android:name=".ui.activities.SettingsActivity"
+            android:exported="false"
+            android:theme="@style/Theme.MinTaxis" />
+
     </application>
 
 </manifest>
