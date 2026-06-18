@@ -110,17 +110,18 @@
                 android:layout_marginTop="8dp"
                 android:gravity="center" />
 
-            <Button
+            <TextView
                 android:id="@+id/bookFirstRide"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
-                android:background="@drawable/premium_button_background"
-                android:backgroundTint="@null"
+                android:background="@drawable/simple_button_background"
                 android:text="@string/book_a_ride"
                 android:textColor="@color/mintaxis_navy"
                 android:textSize="15sp"
                 android:textStyle="bold"
-                android:textAllCaps="false"
+                android:gravity="center"
+                android:clickable="true"
+                android:focusable="true"
                 android:layout_marginTop="24dp" />
 
         </LinearLayout>

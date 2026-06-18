@@ -2,7 +2,6 @@ package com.mintaxis.app.ui.activities
 
 import android.content.Intent
 import android.os.Bundle
-import android.widget.Button
 import android.widget.EditText
 import android.widget.ImageButton
 import android.widget.LinearLayout
@@ -22,7 +21,7 @@ class BookingActivity : AppCompatActivity() {
     private lateinit var sedanOption: LinearLayout
     private lateinit var suvOption: LinearLayout
     private lateinit var vanOption: LinearLayout
-    private lateinit var findDriversButton: Button
+    private lateinit var findDriversButton: TextView
 
     private var selectedFare = 20
     private var selectedVehicle = "sedan"

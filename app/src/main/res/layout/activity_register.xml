@@ -158,18 +158,19 @@
 
             </com.google.android.material.textfield.TextInputLayout>
 
-            <!-- Register Button - FIXED: backgroundTint disabled -->
-            <Button
+            <!-- Register Button -->
+            <TextView
                 android:id="@+id/registerButton"
                 android:layout_width="match_parent"
                 android:layout_height="54dp"
-                android:background="@drawable/premium_button_background"
-                android:backgroundTint="@null"
+                android:background="@drawable/simple_button_background"
                 android:text="SIGN UP"
                 android:textColor="@color/mintaxis_navy"
                 android:textSize="16sp"
                 android:textStyle="bold"
-                android:textAllCaps="false"
+                android:gravity="center"
+                android:clickable="true"
+                android:focusable="true"
                 android:layout_marginTop="18dp" />
 
             <!-- Login Link -->

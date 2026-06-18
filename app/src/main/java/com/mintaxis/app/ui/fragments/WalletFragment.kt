@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.LinearLayout
 import android.widget.RadioButton
+import android.widget.TextView
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import com.mintaxis.app.R
@@ -45,7 +46,7 @@ class WalletFragment : Fragment() {
         voucherOption?.setOnClickListener { clearAll(); voucherRadio?.isChecked = true }
         corporateOption?.setOnClickListener { clearAll(); corporateRadio?.isChecked = true }
 
-        view.findViewById<View>(R.id.topUpButton)?.setOnClickListener {
+        view.findViewById<TextView>(R.id.topUpButton)?.setOnClickListener {
             Toast.makeText(requireContext(), "Top up coming soon", Toast.LENGTH_SHORT).show()
         }
 
