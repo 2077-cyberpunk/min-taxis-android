@@ -379,10 +379,12 @@
                 android:layout_width="match_parent"
                 android:layout_height="54dp"
                 android:background="@drawable/premium_button_background"
+                android:backgroundTint="@null"
                 android:text="@string/find_drivers"
                 android:textColor="@color/mintaxis_navy"
                 android:textSize="16sp"
                 android:textStyle="bold"
+                android:textAllCaps="false"
                 android:layout_marginTop="20dp" />
 
         </LinearLayout>
