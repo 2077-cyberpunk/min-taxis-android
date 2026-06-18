@@ -7,31 +7,28 @@
     android:background="@color/mintaxis_navy"
     android:fillViewport="true">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:orientation="vertical"
         android:padding="16dp">
 
         <!-- Search Box -->
         <com.google.android.material.card.MaterialCardView
-            android:id="@+id/searchCard"
             style="@style/MinTaxis.Card"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                android:padding="16dp">
+                android:padding="12dp">
 
                 <EditText
                     android:id="@+id/searchDestination"
                     android:layout_width="match_parent"
-                    android:layout_height="56dp"
+                    android:layout_height="50dp"
                     android:background="@drawable/search_background"
                     android:drawableStart="@drawable/ic_search"
                     android:drawablePadding="12dp"
@@ -41,22 +38,27 @@
                     android:paddingHorizontal="16dp"
                     android:textColor="@color/mintaxis_text_primary"
                     android:textColorHint="@color/mintaxis_text_muted"
-                    android:textSize="16sp" />
+                    android:textSize="15sp" />
 
             </LinearLayout>
 
         </com.google.android.material.card.MaterialCardView>
 
         <!-- Quick Actions -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/quick_actions"
+            android:textColor="@color/mintaxis_text_primary"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:layout_marginTop="16dp" />
+
         <LinearLayout
-            android:id="@+id/quickActions"
-            android:layout_width="0dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:layout_marginTop="16dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/searchCard">
+            android:layout_marginTop="8dp">
 
             <!-- Book Ride -->
             <LinearLayout
@@ -67,112 +69,156 @@
                 android:orientation="vertical"
                 android:gravity="center"
                 android:background="@drawable/action_button_background"
-                android:padding="16dp"
-                android:layout_marginEnd="8dp">
+                android:padding="14dp"
+                android:layout_marginEnd="6dp">
 
                 <ImageView
-                    android:layout_width="32dp"
-                    android:layout_height="32dp"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
                     android:src="@drawable/ic_car"
                     android:tint="@color/mintaxis_yellow" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Book Ride"
+                    android:text="@string/book_ride"
                     android:textColor="@color/mintaxis_text_primary"
-                    android:textSize="12sp"
-                    android:layout_marginTop="8dp" />
+                    android:textSize="11sp"
+                    android:layout_marginTop="6dp" />
 
             </LinearLayout>
 
             <!-- Parcel -->
             <LinearLayout
+                android:id="@+id/parcelButton"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:orientation="vertical"
                 android:gravity="center"
                 android:background="@drawable/action_button_background"
-                android:padding="16dp"
-                android:layout_marginStart="8dp"
-                android:layout_marginEnd="8dp">
+                android:padding="14dp"
+                android:layout_marginStart="3dp"
+                android:layout_marginEnd="3dp">
 
                 <ImageView
-                    android:layout_width="32dp"
-                    android:layout_height="32dp"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
                     android:src="@drawable/ic_parcel"
                     android:tint="@color/mintaxis_green" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Send Parcel"
+                    android:text="@string/send_parcel"
                     android:textColor="@color/mintaxis_text_primary"
-                    android:textSize="12sp"
-                    android:layout_marginTop="8dp" />
+                    android:textSize="11sp"
+                    android:layout_marginTop="6dp" />
 
             </LinearLayout>
 
             <!-- Schedule -->
             <LinearLayout
+                android:id="@+id/scheduleButton"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:orientation="vertical"
                 android:gravity="center"
                 android:background="@drawable/action_button_background"
-                android:padding="16dp"
-                android:layout_marginStart="8dp">
+                android:padding="14dp"
+                android:layout_marginStart="6dp">
 
                 <ImageView
-                    android:layout_width="32dp"
-                    android:layout_height="32dp"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
                     android:src="@drawable/ic_calendar"
                     android:tint="@color/mintaxis_orange" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Schedule"
+                    android:text="@string/schedule_ride"
                     android:textColor="@color/mintaxis_text_primary"
-                    android:textSize="12sp"
-                    android:layout_marginTop="8dp" />
+                    android:textSize="11sp"
+                    android:layout_marginTop="6dp" />
 
             </LinearLayout>
 
         </LinearLayout>
 
+        <!-- Available 24/7 Badge -->
+        <com.google.android.material.card.MaterialCardView
+            style="@style/MinTaxis.Card"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:padding="12dp">
+
+                <ImageView
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:src="@drawable/ic_location"
+                    android:tint="@color/mintaxis_green" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:layout_marginStart="12dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/available_24_7"
+                        android:textColor="@color/mintaxis_text_primary"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="130+ Taxis | UHF Radio Tracking"
+                        android:textColor="@color/mintaxis_text_muted"
+                        android:textSize="11sp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
         <!-- Recent Locations -->
         <TextView
-            android:id="@+id/recentTitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Recent Locations"
+            android:text="@string/recent_locations"
             android:textColor="@color/mintaxis_text_primary"
-            android:textSize="16sp"
+            android:textSize="14sp"
             android:textStyle="bold"
-            android:layout_marginTop="24dp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/quickActions" />
+            android:layout_marginTop="16dp" />
 
         <!-- Recent Location 1 -->
         <LinearLayout
             android:id="@+id/recentLocation1"
-            android:layout_width="0dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:gravity="center_vertical"
             android:background="@drawable/location_item_background"
-            android:padding="16dp"
-            android:layout_marginTop="12dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/recentTitle">
+            android:padding="14dp"
+            android:layout_marginTop="8dp">
 
             <ImageView
-                android:layout_width="24dp"
-                android:layout_height="24dp"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
                 android:src="@drawable/ic_history"
                 android:tint="@color/mintaxis_text_muted" />
 
@@ -186,23 +232,22 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Eastgate Mall"
+                    android:text="37 Chedgelow Road, Hatfield"
                     android:textColor="@color/mintaxis_text_primary"
-                    android:textSize="14sp"
-                    android:textStyle="bold" />
+                    android:textSize="14sp" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Julius Nyerere Way, Harare"
+                    android:text="MIN Taxis Head Office"
                     android:textColor="@color/mintaxis_text_muted"
-                    android:textSize="12sp" />
+                    android:textSize="11sp" />
 
             </LinearLayout>
 
             <ImageView
-                android:layout_width="20dp"
-                android:layout_height="20dp"
+                android:layout_width="18dp"
+                android:layout_height="18dp"
                 android:src="@drawable/ic_arrow_forward"
                 android:tint="@color/mintaxis_text_muted" />
 
@@ -211,20 +256,17 @@
         <!-- Recent Location 2 -->
         <LinearLayout
             android:id="@+id/recentLocation2"
-            android:layout_width="0dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:gravity="center_vertical"
             android:background="@drawable/location_item_background"
-            android:padding="16dp"
-            android:layout_marginTop="8dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/recentLocation1">
+            android:padding="14dp"
+            android:layout_marginTop="6dp">
 
             <ImageView
-                android:layout_width="24dp"
-                android:layout_height="24dp"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
                 android:src="@drawable/ic_history"
                 android:tint="@color/mintaxis_text_muted" />
 
@@ -238,23 +280,22 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Samora Machel Ave"
+                    android:text="Samora Machel Ave, Harare"
                     android:textColor="@color/mintaxis_text_primary"
-                    android:textSize="14sp"
-                    android:textStyle="bold" />
+                    android:textSize="14sp" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Harare, Zimbabwe"
                     android:textColor="@color/mintaxis_text_muted"
-                    android:textSize="12sp" />
+                    android:textSize="11sp" />
 
             </LinearLayout>
 
             <ImageView
-                android:layout_width="20dp"
-                android:layout_height="20dp"
+                android:layout_width="18dp"
+                android:layout_height="18dp"
                 android:src="@drawable/ic_arrow_forward"
                 android:tint="@color/mintaxis_text_muted" />
 
@@ -263,20 +304,18 @@
         <!-- Recent Location 3 -->
         <LinearLayout
             android:id="@+id/recentLocation3"
-            android:layout_width="0dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:gravity="center_vertical"
             android:background="@drawable/location_item_background"
-            android:padding="16dp"
-            android:layout_marginTop="8dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/recentLocation2">
+            android:padding="14dp"
+            android:layout_marginTop="6dp"
+            android:layout_marginBottom="16dp">
 
             <ImageView
-                android:layout_width="24dp"
-                android:layout_height="24dp"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
                 android:src="@drawable/ic_history"
                 android:tint="@color/mintaxis_text_muted" />
 
@@ -290,27 +329,28 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Robert Mugabe Airport"
+                    android:text="Robert Gabriel Mugabe International Airport"
                     android:textColor="@color/mintaxis_text_primary"
                     android:textSize="14sp"
-                    android:textStyle="bold" />
+                    android:maxLines="1"
+                    android:ellipsize="end" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Harare, Zimbabwe"
                     android:textColor="@color/mintaxis_text_muted"
-                    android:textSize="12sp" />
+                    android:textSize="11sp" />
 
             </LinearLayout>
 
             <ImageView
-                android:layout_width="20dp"
-                android:layout_height="20dp"
+                android:layout_width="18dp"
+                android:layout_height="18dp"
                 android:src="@drawable/ic_arrow_forward"
                 android:tint="@color/mintaxis_text_muted" />
 
         </LinearLayout>
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
 </ScrollView>

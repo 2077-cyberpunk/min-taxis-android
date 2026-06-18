@@ -14,26 +14,52 @@
         android:orientation="horizontal"
         android:gravity="center_vertical"
         android:background="@color/mintaxis_navy_dark"
-        android:paddingHorizontal="16dp"
-        android:paddingVertical="16dp"
+        android:paddingHorizontal="14dp"
+        android:paddingVertical="12dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
         <ImageView
-            android:layout_width="24dp"
-            android:layout_height="24dp"
+            android:layout_width="22dp"
+            android:layout_height="22dp"
             android:src="@drawable/ic_location"
             android:tint="@color/mintaxis_yellow" />
 
-        <TextView
+        <LinearLayout
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Harare, Zimbabwe"
-            android:textColor="@color/mintaxis_text_primary"
-            android:textSize="16sp"
-            android:layout_marginStart="12dp" />
+            android:orientation="vertical"
+            android:layout_marginStart="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Harare, Zimbabwe"
+                android:textColor="@color/mintaxis_text_primary"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="MIN Taxis - 24/7 Service"
+                android:textColor="@color/mintaxis_text_muted"
+                android:textSize="10sp" />
+
+        </LinearLayout>
+
+        <!-- Call Dispatch Button -->
+        <ImageButton
+            android:id="@+id/callDispatchButton"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/circle_background"
+            android:src="@drawable/ic_phone"
+            android:scaleType="centerInside"
+            android:tint="@color/mintaxis_green"
+            android:contentDescription="@string/call_dispatch" />
 
     </LinearLayout>
 

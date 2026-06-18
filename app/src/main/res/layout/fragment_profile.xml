@@ -4,35 +4,30 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/mintaxis_navy">
+    android:background="@color/mintaxis_navy"
+    android:fillViewport="true">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:orientation="vertical"
         android:padding="16dp">
 
         <!-- Header -->
         <TextView
-            android:id="@+id/profileTitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Profile"
             android:textColor="@color/mintaxis_text_primary"
             android:textSize="24sp"
-            android:textStyle="bold"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            android:textStyle="bold" />
 
         <!-- Profile Card -->
         <com.google.android.material.card.MaterialCardView
-            android:id="@+id/profileCard"
             style="@style/MinTaxis.Card"
-            android:layout_width="0dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/profileTitle">
+            android:layout_marginTop="16dp">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -43,8 +38,8 @@
 
                 <de.hdodenhof.circleimageview.CircleImageView
                     android:id="@+id/profileImage"
-                    android:layout_width="80dp"
-                    android:layout_height="80dp"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
                     android:src="@drawable/ic_profile"
                     android:background="@color/mintaxis_navy_light"
                     app:civ_border_color="@color/mintaxis_yellow"
@@ -55,42 +50,69 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:orientation="vertical"
-                    android:layout_marginStart="16dp">
+                    android:layout_marginStart="12dp">
 
                     <TextView
                         android:id="@+id/profileName"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="John Doe"
+                        android:text="@string/profile_name"
                         android:textColor="@color/mintaxis_text_primary"
-                        android:textSize="18sp"
+                        android:textSize="16sp"
                         android:textStyle="bold" />
 
                     <TextView
                         android:id="@+id/profileEmail"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="john@example.com"
+                        android:text="@string/profile_email"
                         android:textColor="@color/mintaxis_text_muted"
-                        android:textSize="14sp"
-                        android:layout_marginTop="4dp" />
+                        android:textSize="12sp"
+                        android:layout_marginTop="2dp" />
 
                     <TextView
                         android:id="@+id/profilePhone"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="+263 77 123 4567"
+                        android:text="@string/profile_phone"
                         android:textColor="@color/mintaxis_yellow"
-                        android:textSize="14sp"
-                        android:layout_marginTop="4dp" />
+                        android:textSize="12sp"
+                        android:layout_marginTop="2dp" />
 
                 </LinearLayout>
 
-                <ImageView
-                    android:layout_width="24dp"
-                    android:layout_height="24dp"
-                    android:src="@drawable/ic_arrow_forward"
-                    android:tint="@color/mintaxis_text_muted" />
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- MIN Taxis Info Card -->
+        <com.google.android.material.card.MaterialCardView
+            style="@style/MinTaxis.Card"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="MIN Taxis (Pvt) Ltd"
+                    android:textColor="@color/mintaxis_yellow"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Est. 2004 | 130+ Taxis | 24/7 Service"
+                    android:textColor="@color/mintaxis_text_secondary"
+                    android:textSize="12sp"
+                    android:layout_marginTop="4dp" />
 
             </LinearLayout>
 
@@ -98,83 +120,113 @@
 
         <!-- Menu Items -->
         <LinearLayout
-            android:id="@+id/menuItems"
-            android:layout_width="0dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:layout_marginTop="24dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/profileCard">
+            android:layout_marginTop="16dp">
 
-            <!-- Settings -->
+            <!-- My Rides -->
             <LinearLayout
-                android:id="@+id/settingsItem"
+                android:id="@+id/myRidesItem"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
                 android:gravity="center_vertical"
                 android:background="@drawable/location_item_background"
-                android:padding="16dp">
+                android:padding="14dp">
 
                 <ImageView
-                    android:layout_width="24dp"
-                    android:layout_height="24dp"
-                    android:src="@drawable/ic_settings"
+                    android:layout_width="22dp"
+                    android:layout_height="22dp"
+                    android:src="@drawable/ic_rides"
                     android:tint="@color/mintaxis_text_muted" />
 
                 <TextView
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="Settings"
+                    android:text="@string/my_rides"
                     android:textColor="@color/mintaxis_text_primary"
-                    android:textSize="16sp"
-                    android:layout_marginStart="16dp" />
+                    android:textSize="15sp"
+                    android:layout_marginStart="14dp" />
 
                 <ImageView
-                    android:layout_width="20dp"
-                    android:layout_height="20dp"
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
                     android:src="@drawable/ic_arrow_forward"
                     android:tint="@color/mintaxis_text_muted" />
 
             </LinearLayout>
 
-            <!-- Payment Methods -->
+            <!-- Contact Us -->
             <LinearLayout
-                android:id="@+id/paymentItem"
+                android:id="@+id/contactUsItem"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
                 android:gravity="center_vertical"
                 android:background="@drawable/location_item_background"
-                android:padding="16dp"
-                android:layout_marginTop="8dp">
+                android:padding="14dp"
+                android:layout_marginTop="6dp">
 
                 <ImageView
-                    android:layout_width="24dp"
-                    android:layout_height="24dp"
-                    android:src="@drawable/ic_wallet"
+                    android:layout_width="22dp"
+                    android:layout_height="22dp"
+                    android:src="@drawable/ic_phone"
                     android:tint="@color/mintaxis_text_muted" />
 
                 <TextView
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="Payment Methods"
+                    android:text="@string/contact_us"
                     android:textColor="@color/mintaxis_text_primary"
-                    android:textSize="16sp"
-                    android:layout_marginStart="16dp" />
+                    android:textSize="15sp"
+                    android:layout_marginStart="14dp" />
 
                 <ImageView
-                    android:layout_width="20dp"
-                    android:layout_height="20dp"
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
                     android:src="@drawable/ic_arrow_forward"
                     android:tint="@color/mintaxis_text_muted" />
 
             </LinearLayout>
 
-            <!-- Safety -->
+            <!-- Our Services -->
+            <LinearLayout
+                android:id="@+id/servicesItem"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:background="@drawable/location_item_background"
+                android:padding="14dp"
+                android:layout_marginTop="6dp">
+
+                <ImageView
+                    android:layout_width="22dp"
+                    android:layout_height="22dp"
+                    android:src="@drawable/ic_car"
+                    android:tint="@color/mintaxis_text_muted" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/our_services"
+                    android:textColor="@color/mintaxis_text_primary"
+                    android:textSize="15sp"
+                    android:layout_marginStart="14dp" />
+
+                <ImageView
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:src="@drawable/ic_arrow_forward"
+                    android:tint="@color/mintaxis_text_muted" />
+
+            </LinearLayout>
+
+            <!-- Safety & Security -->
             <LinearLayout
                 android:id="@+id/safetyItem"
                 android:layout_width="match_parent"
@@ -182,12 +234,12 @@
                 android:orientation="horizontal"
                 android:gravity="center_vertical"
                 android:background="@drawable/location_item_background"
-                android:padding="16dp"
-                android:layout_marginTop="8dp">
+                android:padding="14dp"
+                android:layout_marginTop="6dp">
 
                 <ImageView
-                    android:layout_width="24dp"
-                    android:layout_height="24dp"
+                    android:layout_width="22dp"
+                    android:layout_height="22dp"
                     android:src="@drawable/ic_security"
                     android:tint="@color/mintaxis_text_muted" />
 
@@ -195,33 +247,33 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="Safety"
+                    android:text="@string/safety_security"
                     android:textColor="@color/mintaxis_text_primary"
-                    android:textSize="16sp"
-                    android:layout_marginStart="16dp" />
+                    android:textSize="15sp"
+                    android:layout_marginStart="14dp" />
 
                 <ImageView
-                    android:layout_width="20dp"
-                    android:layout_height="20dp"
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
                     android:src="@drawable/ic_arrow_forward"
                     android:tint="@color/mintaxis_text_muted" />
 
             </LinearLayout>
 
-            <!-- Help -->
+            <!-- FAQs -->
             <LinearLayout
-                android:id="@+id/helpItem"
+                android:id="@+id/faqsItem"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
                 android:gravity="center_vertical"
                 android:background="@drawable/location_item_background"
-                android:padding="16dp"
-                android:layout_marginTop="8dp">
+                android:padding="14dp"
+                android:layout_marginTop="6dp">
 
                 <ImageView
-                    android:layout_width="24dp"
-                    android:layout_height="24dp"
+                    android:layout_width="22dp"
+                    android:layout_height="22dp"
                     android:src="@drawable/ic_help"
                     android:tint="@color/mintaxis_text_muted" />
 
@@ -229,20 +281,20 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="Help"
+                    android:text="@string/faqs"
                     android:textColor="@color/mintaxis_text_primary"
-                    android:textSize="16sp"
-                    android:layout_marginStart="16dp" />
+                    android:textSize="15sp"
+                    android:layout_marginStart="14dp" />
 
                 <ImageView
-                    android:layout_width="20dp"
-                    android:layout_height="20dp"
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
                     android:src="@drawable/ic_arrow_forward"
                     android:tint="@color/mintaxis_text_muted" />
 
             </LinearLayout>
 
-            <!-- About -->
+            <!-- About Us -->
             <LinearLayout
                 android:id="@+id/aboutItem"
                 android:layout_width="match_parent"
@@ -250,12 +302,12 @@
                 android:orientation="horizontal"
                 android:gravity="center_vertical"
                 android:background="@drawable/location_item_background"
-                android:padding="16dp"
-                android:layout_marginTop="8dp">
+                android:padding="14dp"
+                android:layout_marginTop="6dp">
 
                 <ImageView
-                    android:layout_width="24dp"
-                    android:layout_height="24dp"
+                    android:layout_width="22dp"
+                    android:layout_height="22dp"
                     android:src="@drawable/ic_info"
                     android:tint="@color/mintaxis_text_muted" />
 
@@ -263,14 +315,14 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="About"
+                    android:text="@string/about_us"
                     android:textColor="@color/mintaxis_text_primary"
-                    android:textSize="16sp"
-                    android:layout_marginStart="16dp" />
+                    android:textSize="15sp"
+                    android:layout_marginStart="14dp" />
 
                 <ImageView
-                    android:layout_width="20dp"
-                    android:layout_height="20dp"
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
                     android:src="@drawable/ic_arrow_forward"
                     android:tint="@color/mintaxis_text_muted" />
 
@@ -282,15 +334,13 @@
         <Button
             android:id="@+id/logoutButton"
             style="@style/MinTaxis.Button.Secondary"
-            android:layout_width="0dp"
-            android:layout_height="56dp"
-            android:text="Logout"
-            android:textSize="16sp"
-            android:layout_marginTop="24dp"
-            app:strokeColor="@color/mintaxis_error"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/menuItems" />
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="@string/logout"
+            android:textSize="15sp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="24dp"
+            app:strokeColor="@color/mintaxis_error" />
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
 </ScrollView>

@@ -9,12 +9,13 @@
     <!-- Radar Animation Container -->
     <FrameLayout
         android:id="@+id/radarContainer"
-        android:layout_width="250dp"
-        android:layout_height="250dp"
+        android:layout_width="220dp"
+        android:layout_height="220dp"
         app:layout_constraintBottom_toTopOf="@id/statusText"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="packed">
 
         <!-- Radar Background -->
         <ImageView
@@ -33,50 +34,50 @@
 
         <!-- Center Icon -->
         <ImageView
-            android:layout_width="60dp"
-            android:layout_height="60dp"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
             android:src="@drawable/ic_profile"
             android:background="@drawable/circle_background"
-            android:padding="12dp"
+            android:padding="10dp"
             android:tint="@color/mintaxis_yellow"
             android:layout_gravity="center" />
 
         <!-- Driver Dots -->
         <ImageView
             android:id="@+id/driverDot1"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
             android:src="@drawable/ic_car"
             android:background="@drawable/dot_background"
-            android:padding="8dp"
+            android:padding="6dp"
             android:tint="@color/mintaxis_yellow"
             android:layout_gravity="top|start"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="30dp" />
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="24dp" />
 
         <ImageView
             android:id="@+id/driverDot2"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
             android:src="@drawable/ic_car"
             android:background="@drawable/dot_background"
-            android:padding="8dp"
+            android:padding="6dp"
             android:tint="@color/mintaxis_yellow"
             android:layout_gravity="bottom|end"
-            android:layout_marginEnd="20dp"
-            android:layout_marginBottom="40dp" />
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="32dp" />
 
         <ImageView
             android:id="@+id/driverDot3"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
             android:src="@drawable/ic_car"
             android:background="@drawable/dot_background"
-            android:padding="8dp"
+            android:padding="6dp"
             android:tint="@color/mintaxis_yellow"
             android:layout_gravity="top|end"
-            android:layout_marginEnd="30dp"
-            android:layout_marginTop="50dp" />
+            android:layout_marginEnd="24dp"
+            android:layout_marginTop="40dp" />
 
     </FrameLayout>
 
@@ -85,11 +86,11 @@
         android:id="@+id/statusText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Finding drivers near you..."
+        android:text="@string/finding_drivers"
         android:textColor="@color/mintaxis_text_primary"
         android:textSize="18sp"
         android:textStyle="bold"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="24dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/radarContainer" />
@@ -98,10 +99,12 @@
         android:id="@+id/subtitleText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Looking for the best drivers for your trip"
+        android:text="@string/looking_for_best"
         android:textColor="@color/mintaxis_text_muted"
-        android:textSize="14sp"
-        android:layout_marginTop="8dp"
+        android:textSize="13sp"
+        android:layout_marginTop="6dp"
+        android:gravity="center"
+        android:paddingHorizontal="32dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/statusText" />
@@ -115,7 +118,7 @@
         android:max="100"
         android:progress="0"
         android:progressDrawable="@drawable/progress_drawable"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="24dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/subtitleText" />
@@ -125,10 +128,11 @@
         android:id="@+id/cancelButton"
         style="@style/MinTaxis.Button.Secondary"
         android:layout_width="0dp"
-        android:layout_height="56dp"
-        android:text="Cancel"
-        android:textSize="16sp"
-        android:layout_marginBottom="48dp"
+        android:layout_height="50dp"
+        android:text="@string/cancel"
+        android:textSize="15sp"
+        android:layout_marginBottom="40dp"
+        android:layout_marginHorizontal="24dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />

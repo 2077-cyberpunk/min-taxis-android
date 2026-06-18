@@ -2,7 +2,52 @@
 <resources>
     <string name="app_name">MIN Taxis</string>
     <string name="tagline">Total Transport Solutions</string>
-    
+
+    <!-- About -->
+    <string name="about_mintaxis">MIN Taxis (Private) Limited is a family-owned business established in 2004 under the name Lisbury Enterprises (Private) Limited. We are the biggest taxi services provider with over 130 Taxis equipped with UHF Radios, operating 24/7 throughout the year.</string>
+    <string name="our_mission">We passionately believe in providing the highest quality and best value. For its professional business ethics and top-notch services, the company has been endowed with accolades from customers, corporations, and industries.</string>
+
+    <!-- Contact Info -->
+    <string name="head_office">Head Office</string>
+    <string name="head_office_address">37 Chedgelow Road, Hatfield, Harare</string>
+    <string name="phone_primary">+263 772 887 897</string>
+    <string name="phone_secondary">+263 772 840 619</string>
+    <string name="phone_landline1">+263 (242) 747 145</string>
+    <string name="phone_landline2">+263 (242) 571 143/50</string>
+    <string name="email_contact">info@mintaxis.co.zw</string>
+    <string name="bulawayo_branch">Bulawayo Branch</string>
+    <string name="bulawayo_address">1 Cowden Road, Siyakha Warehouse Complex Steelday, Bulawayo</string>
+    <string name="bulawayo_phone1">+263 (292) 260 100</string>
+    <string name="bulawayo_phone2">+263 (292) 883 940</string>
+
+    <!-- Services -->
+    <string name="services">Our Services</string>
+    <string name="service_contract_taxis">Contract Taxis</string>
+    <string name="service_prepaid_taxis">Pre-paid Taxis</string>
+    <string name="service_cash_taxis">Cash Taxis</string>
+    <string name="service_unmarked_taxis">Unmarked Taxis</string>
+    <string name="service_car_rental">Car Rental</string>
+    <string name="service_description">We offer various transportation services including contract taxis, prepaid taxis, cash taxis, unmarked taxis, and car rental services.</string>
+
+    <!-- Safety -->
+    <string name="safety_title">Safety &amp; Security</string>
+    <string name="safety_description">Our staff is thoroughly trained in business etiquette and courtesy services. All drivers go through a safe driving course provided by the Traffic Safety Council of Zimbabwe. Each vehicle is thoroughly checked to ensure it is roadworthy.</string>
+
+    <!-- FAQ -->
+    <string name="faq_title">Frequently Asked Questions</string>
+    <string name="faq_1_question">How do I book a taxi?</string>
+    <string name="faq_1_answer">Booking a taxi with MIN Taxis is simple. You can book by calling our dispatch center at the provided phone numbers. Our team will assist you in arranging your transportation.</string>
+    <string name="faq_2_question">What payment options are available?</string>
+    <string name="faq_2_answer">MIN Taxis offers various payment options including cash, travel vouchers for contracted services, and prepaid services for personal contracts.</string>
+    <string name="faq_3_question">Do you operate 24/7?</string>
+    <string name="faq_3_answer">Yes, our dispatch rooms are operational 24/7, every day of the year. You can access our taxi services whenever you need them.</string>
+    <string name="faq_4_question">How can I track my taxi?</string>
+    <string name="faq_4_answer">Our taxis are equipped with UHF radios, allowing for quick allocation and up-to-the-minute location tracking without being affected by mobile network congestion.</string>
+
+    <!-- Clients -->
+    <string name="trade_references">Trade References</string>
+    <string name="clients_include">Our valued clients include Delta, Deloitte, British Council, Save the Children, BancABC, CARE, OK Zimbabwe, ZB Bank, Stanbic Bank, Simbisa, and Oxfam.</string>
+
     <!-- Login & Registration -->
     <string name="login">Login</string>
     <string name="register">Register</string>
@@ -16,24 +61,43 @@
     <string name="sign_up">Sign Up</string>
     <string name="sign_in">Sign In</string>
     <string name="or_continue_with">or continue with</string>
-    
+    <string name="welcome_back">Welcome Back</string>
+    <string name="login_subtitle">Login to your MIN Taxis account</string>
+    <string name="create_account">Create Account</string>
+    <string name="register_subtitle">Join MIN Taxis today</string>
+
     <!-- Navigation -->
     <string name="home">Home</string>
     <string name="rides">Rides</string>
     <string name="wallet">Wallet</string>
     <string name="profile">Profile</string>
     <string name="settings">Settings</string>
-    
-    <!-- Booking -->
-    <string name="book_ride">Book a Ride</string>
+    <string name="contact_us">Contact Us</string>
+    <string name="about_us">About Us</string>
+    <string name="our_services">Our Services</string>
+    <string name="safety_security">Safety &amp; Security</string>
+    <string name="faqs">FAQs</string>
+    <string name="call_dispatch">Call Dispatch</string>
+
+    <!-- Home -->
+    <string name="search_destination">Search destination...</string>
     <string name="where_to">Where to?</string>
+    <string name="book_ride">Book Ride</string>
+    <string name="send_parcel">Send Parcel</string>
+    <string name="schedule_ride">Schedule</string>
+    <string name="recent_locations">Recent Locations</string>
+    <string name="harare_location">Harare, Zimbabwe</string>
+    <string name="quick_actions">Quick Actions</string>
+    <string name="available_24_7">Available 24/7</string>
+
+    <!-- Booking -->
+    <string name="book_a_ride">Book a Ride</string>
     <string name="pick_up_location">Pick-up location</string>
-    <string name="destination">Destination</string>
+    <string name="destination_hint">Destination</string>
     <string name="set_your_fare">Set Your Fare</string>
     <string name="find_drivers">Find Drivers</string>
-    <string name="suggested_fare" formatted="false">Suggested: $12-18</string>
-    <string name="your_offer">Your offer: $%d</string>
-    
+    <string name="choose_vehicle">Choose Vehicle</string>
+
     <!-- Vehicle Types -->
     <string name="sedan">Sedan</string>
     <string name="suv">SUV</string>
@@ -41,14 +105,14 @@
     <string name="sedan_capacity">1-4 passengers</string>
     <string name="suv_capacity">1-6 passengers</string>
     <string name="van_capacity">1-8 passengers</string>
-    
+
     <!-- Driver Matching -->
     <string name="finding_drivers">Finding drivers near you...</string>
     <string name="looking_for_best">Looking for the best drivers for your trip</string>
     <string name="cancel">Cancel</string>
     <string name="accept">Accept</string>
     <string name="decline">Decline</string>
-    
+
     <!-- Ride -->
     <string name="ride_in_progress">Ride in Progress</string>
     <string name="arriving_in">Arriving in %d min</string>
@@ -56,7 +120,7 @@
     <string name="rate_your_ride">Rate Your Ride</string>
     <string name="share_trip">Share Trip</string>
     <string name="emergency">Emergency</string>
-    
+
     <!-- Driver -->
     <string name="go_online">Go Online</string>
     <string name="go_offline">Go Offline</string>
@@ -64,7 +128,7 @@
     <string name="total_trips">Total Trips</string>
     <string name="new_request">New Request</string>
     <string name="rider_offers">Rider offers:</string>
-    
+
     <!-- Safety -->
     <string name="sos_button">SOS</string>
     <string name="emergency_alert">Emergency Alert</string>
@@ -72,14 +136,36 @@
     <string name="trip_recording">Trip Recording</string>
     <string name="driver_verified">Driver Verified</string>
     <string name="route_monitored">Route Monitored</string>
-    
+
     <!-- Payment -->
     <string name="cash">Cash</string>
     <string name="ecocash">EcoCash</string>
     <string name="visa">Visa</string>
     <string name="mastercard">Mastercard</string>
     <string name="corporate">Corporate</string>
-    
+    <string name="travel_vouchers">Travel Vouchers</string>
+    <string name="prepaid_service">Prepaid Service</string>
+
+    <!-- Profile -->
+    <string name="profile_name">MIN Taxis User</string>
+    <string name="profile_email">user@mintaxis.co.zw</string>
+    <string name="profile_phone">+263 77 000 0000</string>
+    <string name="edit_profile">Edit Profile</string>
+    <string name="my_rides">My Rides</string>
+    <string name="payment_methods">Payment Methods</string>
+    <string name="help_support">Help &amp; Support</string>
+    <string name="logout">Logout</string>
+
+    <!-- Contact -->
+    <string name="call_head_office">Call Head Office</string>
+    <string name="call_bulawayo">Call Bulawayo Branch</string>
+    <string name="send_email">Send Email</string>
+    <string name="visit_website">Visit Website</string>
+    <string name="follow_us">Follow Us</string>
+    <string name="facebook">Facebook</string>
+    <string name="instagram">Instagram</string>
+    <string name="tiktok">TikTok</string>
+
     <!-- General -->
     <string name="save">Save</string>
     <string name="cancel_action">Cancel</string>
@@ -89,7 +175,24 @@
     <string name="success">Success</string>
     <string name="no_internet">No internet connection</string>
     <string name="location_permission">Location permission required</string>
-    
+    <string name="password_reset_coming_soon">Password reset coming soon</string>
+    <string name="account_created_success">Account created successfully!</string>
+
+    <!-- Rides -->
+    <string name="no_rides_yet">No rides yet</string>
+    <string name="ride_history_empty">Your ride history will appear here</string>
+    <string name="upcoming">Upcoming</string>
+    <string name="completed">Completed</string>
+    <string name="cancelled">Cancelled</string>
+
+    <!-- Wallet -->
+    <string name="available_balance">Available Balance</string>
+    <string name="balance_amount">$0.00</string>
+    <string name="top_up">Top Up</string>
+    <string name="withdraw">Withdraw</string>
+    <string name="mobile_money">Mobile Money</string>
+    <string name="pay_with_cash">Pay with cash</string>
+
     <!-- Google Maps -->
     <string name="google_maps_key">YOUR_GOOGLE_MAPS_API_KEY</string>
 </resources>

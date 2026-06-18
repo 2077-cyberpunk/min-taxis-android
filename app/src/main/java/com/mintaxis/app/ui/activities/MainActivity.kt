@@ -1,6 +1,10 @@
 package com.mintaxis.app.ui.activities
 
+import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
+import android.widget.ImageButton
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import com.mintaxis.app.R
@@ -25,6 +29,12 @@ class MainActivity : AppCompatActivity() {
 
     private fun initViews() {
         bottomNavigation = findViewById(R.id.bottomNavigation)
+
+        findViewById<ImageButton>(R.id.callDispatchButton)?.setOnClickListener {
+            val intent = Intent(Intent.ACTION_DIAL)
+            intent.data = Uri.parse("tel:+263772887897")
+            startActivity(intent)
+        }
     }
 
     private fun setupBottomNavigation() {

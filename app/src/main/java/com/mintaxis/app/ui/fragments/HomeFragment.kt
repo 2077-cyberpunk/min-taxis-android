@@ -1,16 +1,15 @@
 package com.mintaxis.app.ui.fragments
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Button
 import android.widget.EditText
 import android.widget.LinearLayout
+import android.widget.Toast
 import androidx.fragment.app.Fragment
-import androidx.appcompat.app.AppCompatActivity
 import com.mintaxis.app.R
-import android.content.Intent
 import com.mintaxis.app.ui.activities.BookingActivity
 
 class HomeFragment : Fragment() {
@@ -28,15 +27,28 @@ class HomeFragment : Fragment() {
 
         val searchBox = view.findViewById<EditText>(R.id.searchDestination)
         val bookButton = view.findViewById<LinearLayout>(R.id.bookRideButton)
+        val parcelButton = view.findViewById<LinearLayout>(R.id.parcelButton)
+        val scheduleButton = view.findViewById<LinearLayout>(R.id.scheduleButton)
+        val recentLocation1 = view.findViewById<LinearLayout>(R.id.recentLocation1)
+        val recentLocation2 = view.findViewById<LinearLayout>(R.id.recentLocation2)
+        val recentLocation3 = view.findViewById<LinearLayout>(R.id.recentLocation3)
 
         searchBox?.isFocusable = false
-        searchBox?.setOnClickListener {
-            openBooking()
+        searchBox?.setOnClickListener { openBooking() }
+
+        bookButton?.setOnClickListener { openBooking() }
+
+        parcelButton?.setOnClickListener {
+            Toast.makeText(requireContext(), "Parcel service coming soon", Toast.LENGTH_SHORT).show()
         }
 
-        bookButton?.setOnClickListener {
-            openBooking()
+        scheduleButton?.setOnClickListener {
+            Toast.makeText(requireContext(), "Schedule feature coming soon", Toast.LENGTH_SHORT).show()
         }
+
+        recentLocation1?.setOnClickListener { openBooking() }
+        recentLocation2?.setOnClickListener { openBooking() }
+        recentLocation3?.setOnClickListener { openBooking() }
     }
 
     private fun openBooking() {
