@@ -11,91 +11,72 @@ import com.google.android.material.textfield.TextInputEditText
 
 class RegisterActivity : AppCompatActivity() {
 
-    private lateinit var backButton: ImageButton
-    private lateinit var fullName: TextInputEditText
-    private lateinit var email: TextInputEditText
-    private lateinit var phoneNumber: TextInputEditText
-    private lateinit var password: TextInputEditText
-    private lateinit var confirmPassword: TextInputEditText
-    private lateinit var registerButton: TextView
-    private lateinit var loginLink: TextView
+    private var fullName: TextInputEditText? = null
+    private var phoneNumber: TextInputEditText? = null
+    private var password: TextInputEditText? = null
+    private var confirmPassword: TextInputEditText? = null
+    private var registerButton: TextView? = null
+    private var loginLink: TextView? = null
+    private var backButton: ImageButton? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_register)
+        try {
+            setContentView(R.layout.activity_register)
+            fullName = findViewById(R.id.fullName)
+            phoneNumber = findViewById(R.id.phoneNumber)
+            password = findViewById(R.id.password)
+            confirmPassword = findViewById(R.id.confirmPassword)
+            registerButton = findViewById(R.id.registerButton)
+            loginLink = findViewById(R.id.loginLink)
+            backButton = findViewById(R.id.backButton)
 
-        backButton = findViewById(R.id.backButton)
-        fullName = findViewById(R.id.fullName)
-        email = findViewById(R.id.email)
-        phoneNumber = findViewById(R.id.phoneNumber)
-        password = findViewById(R.id.password)
-        confirmPassword = findViewById(R.id.confirmPassword)
-        registerButton = findViewById(R.id.registerButton)
-        loginLink = findViewById(R.id.loginLink)
+            registerButton?.setOnClickListener { performRegister() }
 
-        registerButton.setOnClickListener {
-            performRegistration()
-        }
+            loginLink?.setOnClickListener {
+                try {
+                    startActivity(Intent(this, LoginActivity::class.java))
+                    finish()
+                } catch (e: Exception) {
+                    Toast.makeText(this, "Error", Toast.LENGTH_SHORT).show()
+                }
+            }
 
-        loginLink.setOnClickListener {
-            finish()
-        }
-
-        backButton.setOnClickListener {
+            backButton?.setOnClickListener { finish() }
+        } catch (e: Exception) {
+            Toast.makeText(this, "Init error", Toast.LENGTH_LONG).show()
             finish()
         }
     }
 
-    private fun performRegistration() {
-        val name = fullName.text?.toString()?.trim() ?: ""
-        val mail = email.text?.toString()?.trim() ?: ""
-        val phone = phoneNumber.text?.toString()?.trim() ?: ""
-        val pass = password.text?.toString()?.trim() ?: ""
-        val confirmPass = confirmPassword.text?.toString()?.trim() ?: ""
+    private fun performRegister() {
+        val name = fullName?.text?.toString()?.trim() ?: ""
+        val phone = phoneNumber?.text?.toString()?.trim() ?: ""
+        val pass = password?.text?.toString()?.trim() ?: ""
+        val confirm = confirmPassword?.text?.toString()?.trim() ?: ""
 
-        if (name.isEmpty()) {
-            fullName.error = "Name required"
-            return
-        }
+        if (name.isEmpty()) { fullName?.error = "Required"; return }
+        if (phone.isEmpty()) { phoneNumber?.error = "Required"; return }
+        if (pass.isEmpty()) { password?.error = "Required"; return }
+        if (pass != confirm) { confirmPassword?.error = "Passwords do not match"; return }
 
-        if (mail.isEmpty()) {
-            email.error = "Email required"
-            return
-        }
+        registerButton?.isEnabled = false
+        registerButton?.text = "Creating account..."
 
-        if (phone.isEmpty()) {
-            phoneNumber.error = "Phone number required"
-            return
-        }
-
-        if (pass.isEmpty()) {
-            password.error = "Password required"
-            return
-        }
-
-        if (pass != confirmPass) {
-            confirmPassword.error = "Passwords don't match"
-            return
-        }
-
-        registerButton.isEnabled = false
-        registerButton.text = "Creating account..."
-
-        registerButton.postDelayed({
-            registerButton.isEnabled = true
-            registerButton.text = "SIGN UP"
-
-            Toast.makeText(this, "Account created!", Toast.LENGTH_SHORT).show()
-
-            val intent = Intent(this, MainActivity::class.java)
-            startActivity(intent)
-            overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out)
-            finish()
-        }, 1500)
+        registerButton?.postDelayed({
+            try {
+                startActivity(Intent(this, MainActivity::class.java))
+                finishAffinity()
+            } catch (e: Exception) {
+                Toast.makeText(this, "Error", Toast.LENGTH_SHORT).show()
+                registerButton?.isEnabled = true
+                registerButton?.text = "CREATE ACCOUNT"
+            }
+        }, 2000)
     }
 
+    @Suppress("DEPRECATION")
     override fun onBackPressed() {
         super.onBackPressed()
-        overridePendingTransition(android.R.anim.slide_in_left, android.R.anim.slide_out_right)
     }
 }

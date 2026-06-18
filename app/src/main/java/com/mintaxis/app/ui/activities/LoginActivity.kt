@@ -11,73 +11,69 @@ import com.google.android.material.textfield.TextInputEditText
 
 class LoginActivity : AppCompatActivity() {
 
-    private lateinit var phoneNumber: TextInputEditText
-    private lateinit var password: TextInputEditText
-    private lateinit var loginButton: TextView
-    private lateinit var registerLink: TextView
-    private lateinit var forgotPassword: TextView
-    private lateinit var backButton: ImageButton
+    private var phoneNumber: TextInputEditText? = null
+    private var password: TextInputEditText? = null
+    private var loginButton: TextView? = null
+    private var registerLink: TextView? = null
+    private var forgotPassword: TextView? = null
+    private var backButton: ImageButton? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_login)
+        try {
+            setContentView(R.layout.activity_login)
+            phoneNumber = findViewById(R.id.phoneNumber)
+            password = findViewById(R.id.password)
+            loginButton = findViewById(R.id.loginButton)
+            registerLink = findViewById(R.id.registerLink)
+            forgotPassword = findViewById(R.id.forgotPassword)
+            backButton = findViewById(R.id.backButton)
 
-        phoneNumber = findViewById(R.id.phoneNumber)
-        password = findViewById(R.id.password)
-        loginButton = findViewById(R.id.loginButton)
-        registerLink = findViewById(R.id.registerLink)
-        forgotPassword = findViewById(R.id.forgotPassword)
-        backButton = findViewById(R.id.backButton)
+            loginButton?.setOnClickListener { performLogin() }
 
-        loginButton.setOnClickListener {
-            performLogin()
-        }
+            registerLink?.setOnClickListener {
+                try {
+                    startActivity(Intent(this, RegisterActivity::class.java))
+                } catch (e: Exception) {
+                    Toast.makeText(this, "Error", Toast.LENGTH_SHORT).show()
+                }
+            }
 
-        registerLink.setOnClickListener {
-            val intent = Intent(this, RegisterActivity::class.java)
-            startActivity(intent)
-            overridePendingTransition(android.R.anim.slide_in_left, android.R.anim.slide_out_right)
-        }
+            forgotPassword?.setOnClickListener {
+                Toast.makeText(this, "Coming soon", Toast.LENGTH_SHORT).show()
+            }
 
-        forgotPassword.setOnClickListener {
-            Toast.makeText(this, "Password reset coming soon", Toast.LENGTH_SHORT).show()
-        }
-
-        backButton.setOnClickListener {
+            backButton?.setOnClickListener { finish() }
+        } catch (e: Exception) {
+            Toast.makeText(this, "Init error", Toast.LENGTH_LONG).show()
             finish()
         }
     }
 
     private fun performLogin() {
-        val phone = phoneNumber.text?.toString()?.trim() ?: ""
-        val pass = password.text?.toString()?.trim() ?: ""
+        val phone = phoneNumber?.text?.toString()?.trim() ?: ""
+        val pass = password?.text?.toString()?.trim() ?: ""
 
-        if (phone.isEmpty()) {
-            phoneNumber.error = "Phone number required"
-            return
-        }
+        if (phone.isEmpty()) { phoneNumber?.error = "Required"; return }
+        if (pass.isEmpty()) { password?.error = "Required"; return }
 
-        if (pass.isEmpty()) {
-            password.error = "Password required"
-            return
-        }
+        loginButton?.isEnabled = false
+        loginButton?.text = "Logging in..."
 
-        loginButton.isEnabled = false
-        loginButton.text = "Logging in..."
-
-        loginButton.postDelayed({
-            loginButton.isEnabled = true
-            loginButton.text = "LOGIN"
-
-            val intent = Intent(this, MainActivity::class.java)
-            startActivity(intent)
-            overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out)
-            finish()
+        loginButton?.postDelayed({
+            try {
+                startActivity(Intent(this, MainActivity::class.java))
+                finish()
+            } catch (e: Exception) {
+                Toast.makeText(this, "Error", Toast.LENGTH_SHORT).show()
+                loginButton?.isEnabled = true
+                loginButton?.text = "LOGIN"
+            }
         }, 1500)
     }
 
+    @Suppress("DEPRECATION")
     override fun onBackPressed() {
         super.onBackPressed()
-        overridePendingTransition(android.R.anim.slide_in_left, android.R.anim.slide_out_right)
     }
 }
