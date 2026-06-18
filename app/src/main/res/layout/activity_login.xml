@@ -8,56 +8,40 @@
     android:background="@color/mintaxis_navy">
 
     <!-- Hero Section -->
-    <FrameLayout
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="200dp"
-        android:background="@drawable/hero_banner_background">
+        android:background="@drawable/hero_banner_background"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:padding="24dp">
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical"
-            android:gravity="center"
-            android:padding="24dp">
-
-            <ImageView
-                android:id="@+id/logo"
-                android:layout_width="80dp"
-                android:layout_height="80dp"
-                android:src="@mipmap/ic_launcher"
-                android:scaleType="fitCenter"
-                android:contentDescription="@string/app_name" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/welcome_back"
-                android:textColor="@color/mintaxis_white"
-                android:textSize="26sp"
-                android:textStyle="bold"
-                android:layout_marginTop="12dp" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/login_subtitle"
-                android:textColor="#B3FFFFFF"
-                android:textSize="14sp"
-                android:layout_marginTop="4dp" />
-
-        </LinearLayout>
-
-        <!-- Car decoration -->
         <ImageView
-            android:layout_width="100dp"
-            android:layout_height="60dp"
-            android:src="@drawable/ic_taxi_large"
-            android:layout_gravity="bottom|end"
-            android:layout_marginEnd="20dp"
-            android:layout_marginBottom="20dp"
-            android:alpha="0.2" />
+            android:id="@+id/logo"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@mipmap/ic_launcher"
+            android:scaleType="fitCenter"
+            android:contentDescription="@string/app_name" />
 
-    </FrameLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/welcome_back"
+            android:textColor="@color/mintaxis_white"
+            android:textSize="26sp"
+            android:textStyle="bold"
+            android:layout_marginTop="12dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/login_subtitle"
+            android:textColor="#B3FFFFFF"
+            android:textSize="14sp"
+            android:layout_marginTop="4dp" />
+
+    </LinearLayout>
 
     <!-- Login Form -->
     <ScrollView
@@ -131,11 +115,12 @@
                 android:layout_width="match_parent"
                 android:layout_height="54dp"
                 android:background="@drawable/premium_button_background"
-                android:text="@string/login"
+                android:text="LOGIN"
                 android:textColor="@color/mintaxis_navy"
                 android:textSize="16sp"
                 android:textStyle="bold"
-                android:layout_marginTop="20dp" />
+                android:layout_marginTop="20dp"
+                android:textAllCaps="false" />
 
             <!-- Register Link -->
             <LinearLayout
@@ -163,7 +148,7 @@
 
             </LinearLayout>
 
-            <!-- Back Button at bottom -->
+            <!-- Back Button -->
             <ImageButton
                 android:id="@+id/backButton"
                 android:layout_width="44dp"

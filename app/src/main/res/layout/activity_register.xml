@@ -8,54 +8,39 @@
     android:background="@color/mintaxis_navy">
 
     <!-- Hero Section -->
-    <FrameLayout
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="160dp"
-        android:background="@drawable/promo_card_background">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical"
-            android:gravity="center"
-            android:padding="24dp">
-
-            <ImageView
-                android:id="@+id/logo"
-                android:layout_width="60dp"
-                android:layout_height="60dp"
-                android:src="@mipmap/ic_launcher"
-                android:scaleType="fitCenter" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/create_account"
-                android:textColor="@color/mintaxis_white"
-                android:textSize="24sp"
-                android:textStyle="bold"
-                android:layout_marginTop="10dp" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/register_subtitle"
-                android:textColor="#B3FFFFFF"
-                android:textSize="14sp"
-                android:layout_marginTop="4dp" />
-
-        </LinearLayout>
+        android:background="@drawable/promo_card_background"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:padding="24dp">
 
         <ImageView
-            android:layout_width="80dp"
-            android:layout_height="50dp"
-            android:src="@drawable/ic_taxi_large"
-            android:layout_gravity="bottom|end"
-            android:layout_marginEnd="20dp"
-            android:layout_marginBottom="16dp"
-            android:alpha="0.2" />
+            android:id="@+id/logo"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@mipmap/ic_launcher"
+            android:scaleType="fitCenter" />
 
-    </FrameLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/create_account"
+            android:textColor="@color/mintaxis_white"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:layout_marginTop="10dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/register_subtitle"
+            android:textColor="#B3FFFFFF"
+            android:textSize="14sp"
+            android:layout_marginTop="4dp" />
+
+    </LinearLayout>
 
     <!-- Register Form -->
     <ScrollView
@@ -179,10 +164,11 @@
                 android:layout_width="match_parent"
                 android:layout_height="54dp"
                 android:background="@drawable/premium_button_background"
-                android:text="@string/sign_up"
+                android:text="SIGN UP"
                 android:textColor="@color/mintaxis_navy"
                 android:textSize="16sp"
                 android:textStyle="bold"
+                android:textAllCaps="false"
                 android:layout_marginTop="18dp" />
 
             <!-- Login Link -->
