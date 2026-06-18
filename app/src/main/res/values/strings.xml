@@ -4,8 +4,8 @@
     <string name="tagline">Total Transport Solutions</string>
 
     <!-- About -->
-    <string name="about_mintaxis">MIN Taxis (Private) Limited is a family-owned business established in 2004 under the name Lisbury Enterprises (Private) Limited. We are the biggest taxi services provider with over 130 Taxis equipped with UHF Radios, operating 24/7 throughout the year.</string>
-    <string name="our_mission">We passionately believe in providing the highest quality and best value. For its professional business ethics and top-notch services, the company has been endowed with accolades from customers, corporations, and industries.</string>
+    <string name="about_mintaxis">MIN Taxis (Private) Limited is a family-owned business established in 2004 under the name Lisbury Enterprises (Private) Limited. We are Zimbabwe\'s leading total transport solutions provider with over 130 vehicles including taxis, buses, coaches, and rental cars, all equipped with UHF Radios, operating 24/7 throughout the year.</string>
+    <string name="our_mission">We passionately believe in providing the highest quality and best value transport solutions. From individual taxi rides to corporate contracts, from airport transfers to bus hires for special events, MIN Taxis is your trusted partner for all transportation needs.</string>
 
     <!-- Contact Info -->
     <string name="head_office">Head Office</string>
@@ -27,7 +27,11 @@
     <string name="service_cash_taxis">Cash Taxis</string>
     <string name="service_unmarked_taxis">Unmarked Taxis</string>
     <string name="service_car_rental">Car Rental</string>
-    <string name="service_description">We offer various transportation services including contract taxis, prepaid taxis, cash taxis, unmarked taxis, and car rental services.</string>
+    <string name="service_bus_hire">Bus &amp; Coach Hiring</string>
+    <string name="service_airport_transfer">Airport Transfers</string>
+    <string name="service_corporate">Corporate Transport</string>
+    <string name="service_event_transport">Event Transportation</string>
+    <string name="service_description">MIN Taxis offers complete transport solutions including contract taxis, prepaid taxis, cash taxis, unmarked taxis, car rental, bus &amp; coach hiring, airport transfers, corporate transport, and event transportation.</string>
 
     <!-- Safety -->
     <string name="safety_title">Safety &amp; Security</string>
@@ -43,6 +47,12 @@
     <string name="faq_3_answer">Yes, our dispatch rooms are operational 24/7, every day of the year. You can access our taxi services whenever you need them.</string>
     <string name="faq_4_question">How can I track my taxi?</string>
     <string name="faq_4_answer">Our taxis are equipped with UHF radios, allowing for quick allocation and up-to-the-minute location tracking without being affected by mobile network congestion.</string>
+    <string name="faq_5_question">Can I hire a bus for an event?</string>
+    <string name="faq_5_answer">Yes! MIN Taxis offers bus and coach hiring for weddings, corporate events, school trips, and group travel. Contact us for custom quotes.</string>
+    <string name="faq_6_question">Do you offer airport transfers?</string>
+    <string name="faq_6_answer">Yes, we provide reliable airport transfer services to and from Robert Gabriel Mugabe International Airport. Drivers track flight schedules and wait for you at arrivals.</string>
+    <string name="faq_7_question">What car rental options do you have?</string>
+    <string name="faq_7_answer">We offer daily, weekly, and monthly car rentals including sedans, SUVs, and vans. All vehicles are well-maintained and come with comprehensive insurance.</string>
 
     <!-- Clients -->
     <string name="trade_references">Trade References</string>
@@ -78,6 +88,8 @@
     <string name="safety_security">Safety &amp; Security</string>
     <string name="faqs">FAQs</string>
     <string name="call_dispatch">Call Dispatch</string>
+    <string name="our_fleet">Our Fleet &amp; Services</string>
+    <string name="customer_reviews">Customer Reviews</string>
 
     <!-- Home -->
     <string name="search_destination">Search destination...</string>
@@ -85,10 +97,16 @@
     <string name="book_ride">Book Ride</string>
     <string name="send_parcel">Send Parcel</string>
     <string name="schedule_ride">Schedule</string>
+    <string name="hire_bus">Hire Bus</string>
+    <string name="airport_transfer">Airport Transfer</string>
+    <string name="car_rental">Car Rental</string>
     <string name="recent_locations">Recent Locations</string>
     <string name="harare_location">Harare, Zimbabwe</string>
     <string name="quick_actions">Quick Actions</string>
     <string name="available_24_7">Available 24/7</string>
+    <string name="explore_our_fleet">Explore Our Fleet</string>
+    <string name="explore_fleet_desc">See our vehicles and services</string>
+    <string name="view_all_services">View All Services</string>
 
     <!-- Booking -->
     <string name="book_a_ride">Book a Ride</string>
@@ -102,9 +120,11 @@
     <string name="sedan">Sedan</string>
     <string name="suv">SUV</string>
     <string name="van">Van</string>
+    <string name="bus">Bus</string>
     <string name="sedan_capacity">1-4 passengers</string>
     <string name="suv_capacity">1-6 passengers</string>
     <string name="van_capacity">1-8 passengers</string>
+    <string name="bus_capacity">20-50 passengers</string>
 
     <!-- Driver Matching -->
     <string name="finding_drivers">Finding drivers near you...</string>

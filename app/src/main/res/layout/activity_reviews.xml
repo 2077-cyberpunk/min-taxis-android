@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/mintaxis_navy">
+
+    <!-- Header -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:background="@color/mintaxis_yellow"
+        android:paddingHorizontal="16dp"
+        android:paddingVertical="14dp">
+
+        <ImageButton
+            android:id="@+id/backButton"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/circle_background"
+            android:src="@drawable/ic_back"
+            android:scaleType="centerInside"
+            android:tint="@color/mintaxis_navy"
+            android:contentDescription="Back" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Customer Reviews"
+            android:textColor="@color/mintaxis_navy"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:layout_marginEnd="40dp" />
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- Overall Rating Card -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:background="@drawable/gallery_card_background"
+                android:padding="20dp"
+                android:layout_marginBottom="16dp">
+
+                <TextView
+                    android:id="@+id/overallRating"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="4.8"
+                    android:textColor="@color/mintaxis_yellow"
+                    android:textSize="48sp"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:id="@+id/overallStars"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="8dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="★"
+                        android:textColor="@color/mintaxis_yellow"
+                        android:textSize="24sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="★"
+                        android:textColor="@color/mintaxis_yellow"
+                        android:textSize="24sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="★"
+                        android:textColor="@color/mintaxis_yellow"
+                        android:textSize="24sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="★"
+                        android:textColor="@color/mintaxis_yellow"
+                        android:textSize="24sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="★"
+                        android:textColor="@color/mintaxis_yellow"
+                        android:textSize="24sp" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Based on 2,847 reviews"
+                    android:textColor="@color/mintaxis_text_muted"
+                    android:textSize="13sp"
+                    android:layout_marginTop="6dp" />
+
+            </LinearLayout>
+
+            <!-- Reviews List -->
+            <LinearLayout
+                android:id="@+id/reviewsList"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginBottom="16dp" />
+
+            <!-- Write a Review Section -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Write a Review"
+                android:textColor="@color/mintaxis_text_primary"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="10dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/gallery_card_background"
+                android:padding="16dp">
+
+                <EditText
+                    android:id="@+id/reviewNameInput"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:hint="Your name"
+                    android:inputType="textPersonName"
+                    android:textColor="@color/mintaxis_text_primary"
+                    android:textColorHint="@color/mintaxis_text_muted"
+                    android:textSize="15sp"
+                    android:paddingHorizontal="14dp"
+                    android:background="@drawable/edit_text_background"
+                    android:layout_marginBottom="10dp" />
+
+                <EditText
+                    android:id="@+id/reviewTextInput"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:hint="Write your review here..."
+                    android:inputType="textMultiLine"
+                    android:gravity="top"
+                    android:textColor="@color/mintaxis_text_primary"
+                    android:textColorHint="@color/mintaxis_text_muted"
+                    android:textSize="15sp"
+                    android:paddingHorizontal="14dp"
+                    android:paddingVertical="12dp"
+                    android:background="@drawable/edit_text_background"
+                    android:layout_marginBottom="10dp" />
+
+                <!-- Star Rating Selector -->
+                <LinearLayout
+                    android:id="@+id/starRatingSelector"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:layout_marginBottom="14dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Your rating:"
+                        android:textColor="@color/mintaxis_text_secondary"
+                        android:textSize="14sp"
+                        android:layout_marginEnd="10dp" />
+
+                    <TextView
+                        android:id="@+id/star1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="☆"
+                        android:textColor="@color/mintaxis_text_muted"
+                        android:textSize="28sp"
+                        android:tag="1" />
+
+                    <TextView
+                        android:id="@+id/star2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="☆"
+                        android:textColor="@color/mintaxis_text_muted"
+                        android:textSize="28sp"
+                        android:tag="2" />
+
+                    <TextView
+                        android:id="@+id/star3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="☆"
+                        android:textColor="@color/mintaxis_text_muted"
+                        android:textSize="28sp"
+                        android:tag="3" />
+
+                    <TextView
+                        android:id="@+id/star4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="☆"
+                        android:textColor="@color/mintaxis_text_muted"
+                        android:textSize="28sp"
+                        android:tag="4" />
+
+                    <TextView
+                        android:id="@+id/star5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="☆"
+                        android:textColor="@color/mintaxis_text_muted"
+                        android:textSize="28sp"
+                        android:tag="5" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/submitReviewButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="@drawable/simple_button_background"
+                    android:text="Submit Review"
+                    android:textColor="@color/mintaxis_navy"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:clickable="true"
+                    android:focusable="true" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="20dp" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

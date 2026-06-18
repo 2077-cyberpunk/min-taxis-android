@@ -9,6 +9,8 @@ import android.widget.Toast
 import androidx.fragment.app.Fragment
 import com.mintaxis.app.R
 import com.mintaxis.app.ui.activities.BookingActivity
+import com.mintaxis.app.ui.activities.GalleryActivity
+import com.mintaxis.app.ui.activities.ReviewsActivity
 
 class HomeFragment : Fragment() {
 
@@ -34,9 +36,29 @@ class HomeFragment : Fragment() {
             Toast.makeText(requireContext(), "Schedule feature coming soon", Toast.LENGTH_SHORT).show()
         }
 
+        view.findViewById<View>(R.id.busHireButton)?.setOnClickListener {
+            openBusHire()
+        }
+
+        view.findViewById<View>(R.id.airportTransferButton)?.setOnClickListener {
+            openAirportTransfer()
+        }
+
+        view.findViewById<View>(R.id.carRentalButton)?.setOnClickListener {
+            openCarRental()
+        }
+
+        view.findViewById<View>(R.id.exploreFleetButton)?.setOnClickListener {
+            openGallery()
+        }
+
         view.findViewById<View>(R.id.recentLocation1)?.setOnClickListener { openBooking() }
         view.findViewById<View>(R.id.recentLocation2)?.setOnClickListener { openBooking() }
         view.findViewById<View>(R.id.recentLocation3)?.setOnClickListener { openBooking() }
+
+        view.findViewById<View>(R.id.customerReviewsButton)?.setOnClickListener {
+            openReviews()
+        }
     }
 
     private fun openBooking() {
@@ -44,6 +66,55 @@ class HomeFragment : Fragment() {
             val intent = Intent(requireContext(), BookingActivity::class.java)
             startActivity(intent)
             requireActivity().overridePendingTransition(android.R.anim.slide_in_left, android.R.anim.slide_out_right)
+        } catch (e: Exception) {
+            Toast.makeText(requireContext(), "Error: ${e.message}", Toast.LENGTH_SHORT).show()
+        }
+    }
+
+    private fun openBusHire() {
+        try {
+            val intent = Intent(requireContext(), BookingActivity::class.java)
+            intent.putExtra("service_type", "bus_hire")
+            startActivity(intent)
+            requireActivity().overridePendingTransition(android.R.anim.slide_in_left, android.R.anim.slide_out_right)
+        } catch (e: Exception) {
+            Toast.makeText(requireContext(), "Error: ${e.message}", Toast.LENGTH_SHORT).show()
+        }
+    }
+
+    private fun openAirportTransfer() {
+        try {
+            val intent = Intent(requireContext(), BookingActivity::class.java)
+            intent.putExtra("service_type", "airport_transfer")
+            startActivity(intent)
+            requireActivity().overridePendingTransition(android.R.anim.slide_in_left, android.R.anim.slide_out_right)
+        } catch (e: Exception) {
+            Toast.makeText(requireContext(), "Error: ${e.message}", Toast.LENGTH_SHORT).show()
+        }
+    }
+
+    private fun openCarRental() {
+        try {
+            val intent = Intent(requireContext(), BookingActivity::class.java)
+            intent.putExtra("service_type", "car_rental")
+            startActivity(intent)
+            requireActivity().overridePendingTransition(android.R.anim.slide_in_left, android.R.anim.slide_out_right)
+        } catch (e: Exception) {
+            Toast.makeText(requireContext(), "Error: ${e.message}", Toast.LENGTH_SHORT).show()
+        }
+    }
+
+    private fun openGallery() {
+        try {
+            startActivity(Intent(requireContext(), GalleryActivity::class.java))
+        } catch (e: Exception) {
+            Toast.makeText(requireContext(), "Error: ${e.message}", Toast.LENGTH_SHORT).show()
+        }
+    }
+
+    private fun openReviews() {
+        try {
+            startActivity(Intent(requireContext(), ReviewsActivity::class.java))
         } catch (e: Exception) {
             Toast.makeText(requireContext(), "Error: ${e.message}", Toast.LENGTH_SHORT).show()
         }

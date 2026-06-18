@@ -36,7 +36,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="130+ Taxis Available | 24/7 Service"
+                    android:text="130+ Vehicles | 24/7 | Taxis, Buses &amp; Car Rental"
                     android:textColor="#FFFFFFB3"
                     android:textSize="14sp"
                     android:layout_marginTop="4dp" />
@@ -71,7 +71,6 @@
 
             </LinearLayout>
 
-            <!-- Car Illustration on right -->
             <ImageView
                 android:layout_width="120dp"
                 android:layout_height="80dp"
@@ -83,14 +82,24 @@
 
         </FrameLayout>
 
-        <!-- Quick Actions -->
+        <!-- Quick Actions Row 1: Taxi Services -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Taxi Services"
+            android:textColor="@color/mintaxis_yellow"
+            android:textSize="13sp"
+            android:textStyle="bold"
+            android:paddingHorizontal="16dp"
+            android:layout_marginTop="16dp" />
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:padding="12dp">
+            android:paddingHorizontal="12dp"
+            android:layout_marginTop="6dp">
 
-            <!-- Book Ride -->
             <LinearLayout
                 android:id="@+id/bookRideButton"
                 android:layout_width="0dp"
@@ -100,7 +109,7 @@
                 android:gravity="center"
                 android:background="@drawable/action_button_background"
                 android:paddingVertical="16dp"
-                android:layout_marginEnd="6dp">
+                android:layout_marginEnd="4dp">
 
                 <ImageView
                     android:layout_width="32dp"
@@ -113,14 +122,13 @@
                     android:layout_height="wrap_content"
                     android:text="Book Ride"
                     android:textColor="@color/mintaxis_text_primary"
-                    android:textSize="12sp"
+                    android:textSize="11sp"
                     android:textStyle="bold"
                     android:layout_marginTop="8dp"
                     android:layout_gravity="center" />
 
             </LinearLayout>
 
-            <!-- Send Parcel -->
             <LinearLayout
                 android:id="@+id/parcelButton"
                 android:layout_width="0dp"
@@ -130,7 +138,7 @@
                 android:gravity="center"
                 android:background="@drawable/action_button_background"
                 android:paddingVertical="16dp"
-                android:layout_marginHorizontal="3dp">
+                android:layout_marginHorizontal="4dp">
 
                 <ImageView
                     android:layout_width="32dp"
@@ -143,14 +151,13 @@
                     android:layout_height="wrap_content"
                     android:text="Send Parcel"
                     android:textColor="@color/mintaxis_text_primary"
-                    android:textSize="12sp"
+                    android:textSize="11sp"
                     android:textStyle="bold"
                     android:layout_marginTop="8dp"
                     android:layout_gravity="center" />
 
             </LinearLayout>
 
-            <!-- Schedule -->
             <LinearLayout
                 android:id="@+id/scheduleButton"
                 android:layout_width="0dp"
@@ -160,7 +167,7 @@
                 android:gravity="center"
                 android:background="@drawable/action_button_background"
                 android:paddingVertical="16dp"
-                android:layout_marginStart="6dp">
+                android:layout_marginStart="4dp">
 
                 <ImageView
                     android:layout_width="32dp"
@@ -173,7 +180,117 @@
                     android:layout_height="wrap_content"
                     android:text="Schedule"
                     android:textColor="@color/mintaxis_text_primary"
-                    android:textSize="12sp"
+                    android:textSize="11sp"
+                    android:textStyle="bold"
+                    android:layout_marginTop="8dp"
+                    android:layout_gravity="center" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- Quick Actions Row 2: More Services -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="More Services"
+            android:textColor="@color/mintaxis_yellow"
+            android:textSize="13sp"
+            android:textStyle="bold"
+            android:paddingHorizontal="16dp"
+            android:layout_marginTop="14dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingHorizontal="12dp"
+            android:layout_marginTop="6dp">
+
+            <!-- Bus Hire -->
+            <LinearLayout
+                android:id="@+id/busHireButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:background="@drawable/action_button_background"
+                android:paddingVertical="16dp"
+                android:layout_marginEnd="4dp">
+
+                <ImageView
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:src="@drawable/ic_people"
+                    android:layout_gravity="center" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Hire Bus"
+                    android:textColor="@color/mintaxis_text_primary"
+                    android:textSize="11sp"
+                    android:textStyle="bold"
+                    android:layout_marginTop="8dp"
+                    android:layout_gravity="center" />
+
+            </LinearLayout>
+
+            <!-- Airport Transfer -->
+            <LinearLayout
+                android:id="@+id/airportTransferButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:background="@drawable/action_button_background"
+                android:paddingVertical="16dp"
+                android:layout_marginHorizontal="4dp">
+
+                <ImageView
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:src="@drawable/ic_navigation"
+                    android:layout_gravity="center" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Airport"
+                    android:textColor="@color/mintaxis_text_primary"
+                    android:textSize="11sp"
+                    android:textStyle="bold"
+                    android:layout_marginTop="8dp"
+                    android:layout_gravity="center" />
+
+            </LinearLayout>
+
+            <!-- Car Rental -->
+            <LinearLayout
+                android:id="@+id/carRentalButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:background="@drawable/action_button_background"
+                android:paddingVertical="16dp"
+                android:layout_marginStart="4dp">
+
+                <ImageView
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:src="@drawable/ic_car_white"
+                    android:layout_gravity="center" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Car Rental"
+                    android:textColor="@color/mintaxis_text_primary"
+                    android:textSize="11sp"
                     android:textStyle="bold"
                     android:layout_marginTop="8dp"
                     android:layout_gravity="center" />
@@ -190,7 +307,8 @@
             android:background="@drawable/safety_card_background"
             android:gravity="center_vertical"
             android:padding="14dp"
-            android:layout_marginHorizontal="12dp">
+            android:layout_marginHorizontal="12dp"
+            android:layout_marginTop="14dp">
 
             <ImageView
                 android:layout_width="40dp"
@@ -216,7 +334,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="All drivers verified | UHF Radio Tracking"
+                    android:text="All drivers verified | UHF Radio Tracking | 24/7 Monitoring"
                     android:textColor="#B3FFFFFF"
                     android:textSize="11sp" />
 
@@ -224,7 +342,61 @@
 
         </LinearLayout>
 
-        <!-- Promo Cards Section -->
+        <!-- Our Fleet Preview -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Explore Our Fleet"
+            android:textColor="@color/mintaxis_text_primary"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:paddingHorizontal="16dp"
+            android:layout_marginTop="20dp" />
+
+        <LinearLayout
+            android:id="@+id/exploreFleetButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@drawable/promo_orange_background"
+            android:gravity="center_vertical"
+            android:padding="16dp"
+            android:layout_marginHorizontal="12dp"
+            android:layout_marginTop="10dp">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="See Our Vehicles &amp; Services"
+                    android:textColor="@color/mintaxis_white"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Taxis, Buses, Car Rental, Airport Transfers &amp; More"
+                    android:textColor="#CCFFFFFF"
+                    android:textSize="12sp"
+                    android:layout_marginTop="4dp" />
+
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_arrow_forward"
+                android:tint="@color/mintaxis_white" />
+
+        </LinearLayout>
+
+        <!-- Promo Cards -->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -315,7 +487,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Special rates for businesses. Prepaid taxi services available."
+                    android:text="Special rates for businesses. Contract taxis, bus hires &amp; car rental."
                     android:textColor="#CCFFFFFF"
                     android:textSize="12sp"
                     android:layout_marginTop="4dp" />
@@ -341,7 +513,6 @@
             android:paddingHorizontal="16dp"
             android:layout_marginTop="20dp" />
 
-        <!-- Location 1 -->
         <LinearLayout
             android:id="@+id/recentLocation1"
             android:layout_width="match_parent"
@@ -391,7 +562,6 @@
 
         </LinearLayout>
 
-        <!-- Location 2 -->
         <LinearLayout
             android:id="@+id/recentLocation2"
             android:layout_width="match_parent"
@@ -443,7 +613,6 @@
 
         </LinearLayout>
 
-        <!-- Location 3 -->
         <LinearLayout
             android:id="@+id/recentLocation3"
             android:layout_width="match_parent"
@@ -494,17 +663,33 @@
         </LinearLayout>
 
         <!-- Testimonials Section -->
-        <TextView
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:id="@+id/customerReviewsButton"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="What Our Customers Say"
-            android:textColor="@color/mintaxis_text_primary"
-            android:textSize="16sp"
-            android:textStyle="bold"
-            android:paddingHorizontal="16dp"
-            android:layout_marginTop="24dp" />
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginTop="24dp"
+            android:paddingHorizontal="16dp">
 
-        <!-- Testimonial 1 -->
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="What Our Customers Say"
+                android:textColor="@color/mintaxis_text_primary"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="View All"
+                android:textColor="@color/mintaxis_yellow"
+                android:textSize="13sp" />
+
+        </LinearLayout>
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -519,41 +704,18 @@
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
 
-                <ImageView
-                    android:layout_width="16dp"
-                    android:layout_height="16dp"
-                    android:src="@drawable/ic_star" />
-
-                <ImageView
-                    android:layout_width="16dp"
-                    android:layout_height="16dp"
-                    android:src="@drawable/ic_star"
-                    android:layout_marginStart="2dp" />
-
-                <ImageView
-                    android:layout_width="16dp"
-                    android:layout_height="16dp"
-                    android:src="@drawable/ic_star"
-                    android:layout_marginStart="2dp" />
-
-                <ImageView
-                    android:layout_width="16dp"
-                    android:layout_height="16dp"
-                    android:src="@drawable/ic_star"
-                    android:layout_marginStart="2dp" />
-
-                <ImageView
-                    android:layout_width="16dp"
-                    android:layout_height="16dp"
-                    android:src="@drawable/ic_star"
-                    android:layout_marginStart="2dp" />
+                <ImageView android:layout_width="16dp" android:layout_height="16dp" android:src="@drawable/ic_star" />
+                <ImageView android:layout_width="16dp" android:layout_height="16dp" android:src="@drawable/ic_star" android:layout_marginStart="2dp" />
+                <ImageView android:layout_width="16dp" android:layout_height="16dp" android:src="@drawable/ic_star" android:layout_marginStart="2dp" />
+                <ImageView android:layout_width="16dp" android:layout_height="16dp" android:src="@drawable/ic_star" android:layout_marginStart="2dp" />
+                <ImageView android:layout_width="16dp" android:layout_height="16dp" android:src="@drawable/ic_star" android:layout_marginStart="2dp" />
 
             </LinearLayout>
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="The voucher system is a game-changer. Seamless and secure transactions without carrying cash."
+                android:text="Best taxi service in Harare. Professional drivers, clean vehicles, and the UHF radio tracking is amazing."
                 android:textColor="@color/mintaxis_white"
                 android:textSize="13sp"
                 android:layout_marginTop="8dp"
@@ -562,7 +724,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="- Julia S., Harare"
+                android:text="- Tendai M., Harare"
                 android:textColor="@color/mintaxis_yellow"
                 android:textSize="12sp"
                 android:textStyle="bold"
@@ -573,7 +735,7 @@
         <!-- Bottom Spacing -->
         <View
             android:layout_width="match_parent"
-            android:layout_height="16dp" />
+            android:layout_height="24dp" />
 
     </LinearLayout>
 </ScrollView>

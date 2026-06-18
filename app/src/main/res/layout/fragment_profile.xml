@@ -342,6 +342,74 @@
 
             </LinearLayout>
 
+            <!-- Our Fleet & Services -->
+            <LinearLayout
+                android:id="@+id/galleryItem"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:background="@drawable/location_item_background"
+                android:padding="16dp"
+                android:layout_marginTop="6dp">
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/min1"
+                    android:tint="@color/mintaxis_yellow" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Our Fleet &amp; Services"
+                    android:textColor="@color/mintaxis_text_primary"
+                    android:textSize="15sp"
+                    android:layout_marginStart="14dp" />
+
+                <ImageView
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:src="@drawable/ic_arrow_forward"
+                    android:tint="@color/mintaxis_text_muted" />
+
+            </LinearLayout>
+
+            <!-- Customer Reviews -->
+            <LinearLayout
+                android:id="@+id/reviewsItem"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:background="@drawable/location_item_background"
+                android:padding="16dp"
+                android:layout_marginTop="6dp">
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/ic_star"
+                    android:tint="@color/mintaxis_yellow" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Customer Reviews"
+                    android:textColor="@color/mintaxis_text_primary"
+                    android:textSize="15sp"
+                    android:layout_marginStart="14dp" />
+
+                <ImageView
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:src="@drawable/ic_arrow_forward"
+                    android:tint="@color/mintaxis_text_muted" />
+
+            </LinearLayout>
+
             <!-- About Us -->
             <LinearLayout
                 android:id="@+id/aboutItem"
@@ -379,7 +447,7 @@
         </LinearLayout>
 
         <!-- Logout Button -->
-        <Button
+        <TextView
             android:id="@+id/logoutButton"
             android:layout_width="match_parent"
             android:layout_height="50dp"
@@ -388,8 +456,11 @@
             android:textColor="@color/mintaxis_error"
             android:textSize="15sp"
             android:textStyle="bold"
+            android:gravity="center"
             android:layout_margin="12dp"
-            android:layout_marginBottom="16dp" />
+            android:layout_marginBottom="16dp"
+            android:clickable="true"
+            android:focusable="true" />
 
     </LinearLayout>
 </ScrollView>

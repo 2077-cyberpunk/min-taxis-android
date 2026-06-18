@@ -10,6 +10,9 @@ import android.widget.LinearLayout
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import com.mintaxis.app.R
+import com.mintaxis.app.ui.activities.GalleryActivity
+import com.mintaxis.app.ui.activities.LoginActivity
+import com.mintaxis.app.ui.activities.ReviewsActivity
 
 class ProfileFragment : Fragment() {
 
@@ -47,6 +50,32 @@ class ProfileFragment : Fragment() {
         view.findViewById<LinearLayout>(R.id.myRidesItem)?.setOnClickListener {
             Toast.makeText(requireContext(), "Ride history coming soon", Toast.LENGTH_SHORT).show()
         }
+
+        view.findViewById<LinearLayout>(R.id.galleryItem)?.setOnClickListener {
+            try {
+                startActivity(Intent(requireContext(), GalleryActivity::class.java))
+            } catch (e: Exception) {
+                Toast.makeText(requireContext(), "Error", Toast.LENGTH_SHORT).show()
+            }
+        }
+
+        view.findViewById<LinearLayout>(R.id.reviewsItem)?.setOnClickListener {
+            try {
+                startActivity(Intent(requireContext(), ReviewsActivity::class.java))
+            } catch (e: Exception) {
+                Toast.makeText(requireContext(), "Error", Toast.LENGTH_SHORT).show()
+            }
+        }
+
+        view.findViewById<LinearLayout>(R.id.logoutButton)?.setOnClickListener {
+            try {
+                val intent = Intent(requireContext(), LoginActivity::class.java)
+                intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+                startActivity(intent)
+            } catch (e: Exception) {
+                Toast.makeText(requireContext(), "Error", Toast.LENGTH_SHORT).show()
+            }
+        }
     }
 
     private fun showContactDialog() {
@@ -79,14 +108,31 @@ class ProfileFragment : Fragment() {
         android.app.AlertDialog.Builder(requireContext())
             .setTitle("Our Services")
             .setMessage(
-                "MIN Taxis offers:\n\n" +
-                "• Contract Taxis\n" +
-                "• Pre-paid Taxis\n" +
-                "• Cash Taxis\n" +
-                "• Unmarked Taxis\n" +
-                "• Car Rental\n\n" +
-                "130+ Taxis with UHF Radios\n" +
-                "Available 24/7 throughout the year"
+                "MIN Taxis - Total Transport Solutions:\n\n" +
+                "TAXI SERVICES:\n" +
+                "• Contract Taxis - Daily commute solutions\n" +
+                "• Pre-paid Taxis - Pay in advance\n" +
+                "• Cash Taxis - Pay per ride\n" +
+                "• Unmarked Taxis - Discreet travel\n\n" +
+                "CAR RENTAL:\n" +
+                "• Daily, Weekly & Monthly rentals\n" +
+                "• Sedans, SUVs & Vans available\n" +
+                "• Well-maintained fleet\n\n" +
+                "BUS & COACH HIRING:\n" +
+                "• Weddings & events\n" +
+                "• Corporate group travel\n" +
+                "• School trips & tours\n" +
+                "• 20-50 seater coaches\n\n" +
+                "AIRPORT TRANSFERS:\n" +
+                "• RGM International Airport\n" +
+                "• Flight tracking included\n" +
+                "• Meet & greet service\n\n" +
+                "CORPORATE TRANSPORT:\n" +
+                "• Business accounts\n" +
+                "• Contract solutions\n" +
+                "• Event transportation\n\n" +
+                "Available 24/7 throughout the year\n" +
+                "130+ Vehicles with UHF Radios"
             )
             .setPositiveButton("OK", null)
             .show()
@@ -99,9 +145,12 @@ class ProfileFragment : Fragment() {
                 "Your safety is our priority:\n\n" +
                 "• All drivers trained in safe driving\n" +
                 "• Traffic Safety Council certified\n" +
-                "• Regular vehicle maintenance\n" +
+                "• Regular vehicle maintenance checks\n" +
                 "• UHF radio tracking system\n" +
-                "• Professional business etiquette"
+                "• Professional business etiquette\n" +
+                "• 24/7 dispatch monitoring\n" +
+                "• GPS tracking on all vehicles\n" +
+                "• Emergency response system"
             )
             .setPositiveButton("OK", null)
             .show()
@@ -109,16 +158,22 @@ class ProfileFragment : Fragment() {
 
     private fun showFaqDialog() {
         android.app.AlertDialog.Builder(requireContext())
-            .setTitle("FAQs")
+            .setTitle("Frequently Asked Questions")
             .setMessage(
-                "Q: How do I book?\n" +
-                "A: Call our dispatch center\n\n" +
+                "Q: How do I book a taxi?\n" +
+                "A: Call our dispatch center or use the app.\n\n" +
                 "Q: Payment options?\n" +
-                "A: Cash, vouchers, prepaid\n\n" +
-                "Q: 24/7 service?\n" +
-                "A: Yes, every day of the year\n\n" +
-                "Q: How to track taxi?\n" +
-                "A: UHF radios provide real-time tracking"
+                "A: Cash, EcoCash, vouchers, prepaid.\n\n" +
+                "Q: Do you operate 24/7?\n" +
+                "A: Yes, every day of the year.\n\n" +
+                "Q: How to track my taxi?\n" +
+                "A: UHF radios provide real-time tracking.\n\n" +
+                "Q: Can I hire a bus for events?\n" +
+                "A: Yes! We have coaches for 20-50 people.\n\n" +
+                "Q: Do you offer airport transfers?\n" +
+                "A: Yes, with flight tracking included.\n\n" +
+                "Q: What car rental options?\n" +
+                "A: Sedans, SUVs, vans. Daily to monthly."
             )
             .setPositiveButton("OK", null)
             .show()
@@ -130,9 +185,17 @@ class ProfileFragment : Fragment() {
             .setMessage(
                 "MIN Taxis (Private) Limited\n" +
                 "Established in 2004\n\n" +
-                "We are a family-owned business and the biggest taxi services provider in Zimbabwe with over 130 Taxis equipped with UHF Radios.\n\n" +
+                "Zimbabwe's leading total transport solutions provider.\n\n" +
+                "Our Services:\n" +
+                "• 130+ Taxis (Contract, Pre-paid, Cash, Unmarked)\n" +
+                "• Car Rental (Daily, Weekly, Monthly)\n" +
+                "• Bus & Coach Hiring (20-50 seats)\n" +
+                "• Airport Transfers (RGM International)\n" +
+                "• Corporate Transport Solutions\n" +
+                "• Event Transportation\n\n" +
+                "All vehicles equipped with UHF Radios.\n" +
                 "Operating 24/7 throughout the year.\n\n" +
-                "Clients include: Delta, Deloitte, British Council, Save the Children, BancABC, CARE, OK Zimbabwe, ZB Bank, Stanbic, Simbisa, and Oxfam."
+                "Clients: Delta, Deloitte, British Council, Save the Children, BancABC, CARE, OK Zimbabwe, ZB Bank, Stanbic, Simbisa, Oxfam."
             )
             .setPositiveButton("OK", null)
             .show()
